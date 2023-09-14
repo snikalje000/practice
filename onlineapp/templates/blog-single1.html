@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url('../static/images/blog.png');">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-center justify-content-center">
+      <div class="col-md-9 ftco-animate pb-5 text-center">
+        <p class="breadcrumbs d-flex justify-content-center" style="gap: 0px !important;"><span class="mr-2"><a href="{% url 'onlineapp:index' %}">Home <i class="fa fa-chevron-right"></i></a></span> <span
+            class="mr-2"></span> 
+            <a href="{% url 'onlineapp:blogsingle1' %}"><span>Building a Growth Mindset</span></a></p>
+        <h1 class="mb-0 bread">Our Blog</h1>
+      </div>
+    </div>
+ </div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ftco-animate py-md-5 mt-md-5">
+        <h2 class="mb-3">Building a Growth Mindset: The Key to Personal and Professional Development</h2>
+        <p class="text-justify">The concept of a growth mindset has gained significant attention in recent years, emphasizing the belief that intelligence and abilities can be developed through effort, practice, and resilience. In this blog, we will explore the importance of cultivating a growth mindset for personal and professional development and how it can positively impact our lives. 
+</p>
+        <p>
+          <img src="{% static 'images/13.webp' %}" alt="banner1" class="img-fluid">
+        </p>
+        <p class="text-justify">Embracing challenges and setbacks becomes a transformative experience when we adopt a growth mindset. Rather than seeing obstacles as roadblocks, individuals with a growth mindset view them as opportunities for personal and professional development. They understand that setbacks are temporary and believe in their ability to overcome challenges through effort and resilience. </p>
+        <a href="#!" class="expand-post">Continue reading</a>
+        <span style="display:none">
+
+ 
+<p class="text-justify">
+
+  Feedback is not seen as criticism but as a valuable source of learning and growth. Those with a growth mindset actively seek feedback and use it to refine their skills and improve their performance. They recognize that feedback provides valuable insights and helps them identify areas for development, leading to continuous growth and improvement. 
+</p>
+
+ 
+<p class="text-justify">
+
+  Maintaining a positive attitude and resilience are essential traits of individuals with a growth mindset. They understand that setbacks and failures are part of the learning process and do not define their worth or abilities. Instead, they use these experiences as steppingstones for growth, bouncing back stronger and more determined to achieve their goals. 
+  
+   
+</p>
+
+<p class="text-justify">
+
+  Seeking out new opportunities and challenges is a hallmark of individuals with a growth mindset. They actively seek ways to expand their knowledge, develop new skills, and step outside their comfort zones. By embracing a mindset of continuous improvement, they open doors to personal and professional growth, unlocking their full potential along the way. 
+</p>
+
+          <h2 class="mb-3 mt-5">Conclusion </h2>
+          <p class="text-justify">Cultivating a growth mindset is crucial for personal and professional development. By embracing challenges, persisting in the face of setbacks, seeking feedback, maintaining a positive attitude, and continuously seeking opportunities for growth, individuals can unlock their potential, develop their skills, and achieve greater success. With a growth mindset, the possibilities for personal and professional growth are limitless.  </p>
+        </span>
+        
+        
+
+
+      </div> <!-- .col-md-8 -->
+      <div class="col-lg-4 sidebar ftco-animate pl-md-4 py-md-5">
+        <div class="sidebar-box mt-md-5 bg-light">
+          <form action="#" class="search-form">
+            <div class="form-group">
+              <span class="icon fa fa-search"></span>
+              <input type="text" class="form-control" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+        <div class="sidebar-box ftco-animate">
+          <div class="categories">
+            <h3>Services</h3>
+            <li><a href="{% url 'onlineapp:courses' %}">Data Science </a></li>
+            <li><a href="{% url 'onlineapp:coursedataanalytics' %}">AI/ML </a></li>
+            <li><a href="{% url 'onlineapp:coursecybersecurity' %}">Cloud</a></li>
+            <li><a href="{% url 'onlineapp:coursecloudcomputing' %}">Cyber Security </a></li>
+          </div>
+        </div>
+        
+
+        <div class="sidebar-box ftco-animate">
+          <h3>Recent Blog</h3>
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(../static/images/12.webp);"></a>
+            <div class="text">
+                            <h3 class="heading"><a href="{% url 'onlineapp:blogsingle' %}">The Future of Education: Trends and Innovations to Watch</a></h3>
+              <div class="meta">
+                <!-- <div><a href="#"><span class="fa fa-calendar"></span> Sept. 17, 2020</a></div>
+                <div><a href="#"><span class="fa fa-user"></span> Admin</a></div>
+                <div><a href="#"><span class="fa fa-comment"></span> 19</a></div> -->
+              </div>
+            </div>
+          </div>
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(../static/images/13.webp);"></a>
+            <div class="text">
+                            <h3 class="heading"><a href="{% url 'onlineapp:blogsingle1' %}">Building a Growth Mindset: Key to Development</a></h3>
+              <div class="meta">
+                <!-- <div><a href="#"><span class="fa fa-calendar"></span> Sept. 17, 2020</a></div>
+                <div><a href="#"><span class="fa fa-user"></span> Admin</a></div>
+                <div><a href="#"><span class="fa fa-comment"></span> 19</a></div> -->
+              </div>
+            </div>
+          </div>
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(../static/images/blog3.webp);"></a>
+            <div class="text">
+                            <h3 class="heading"><a href="{% url 'onlineapp:blogsingle2' %}">Balancing Work and Education: Tips for Working Professionals</a></h3>
+              <div class="meta">
+                <!-- <div><a href="#"><span class="fa fa-calendar"></span> Sept. 17, 2020</a></div>
+                <div><a href="#"><span class="fa fa-user"></span> Admin</a></div>
+                <div><a href="#"><span class="fa fa-comment"></span> 19</a></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-box ftco-animate">
+          <h3>Tag Cloud</h3>
+          <div class="tagcloud">
+            <a href="#!" class="tag-cloud-link">Cyber Security</a>
+            <a href="#!" class="tag-cloud-link">Data Science</a>
+            <a href="#!" class="tag-cloud-link">Artificial intelligence</a>
+            <a href="#!" class="tag-cloud-link">Machine Learning</a>
+            <a href="#!" class="tag-cloud-link">Cloud</a>
+            <a href="#!" class="tag-cloud-link">Iot</a>
+            <a href="#!" class="tag-cloud-link">Technology</a>
+            <a href="#!" class="tag-cloud-link">Big Data</a>
+          </div>
+        </div>
+
+        
+      </div>
+
+    </div>
+  </div>
+</section> <!-- .section -->	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(".expand-post").click(function () {
+    $(this).hide().next().show();
+});
+</script>
+{% endblock %}

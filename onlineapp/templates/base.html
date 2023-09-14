@@ -1,0 +1,1407 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- <title>eShiksha</title> -->
+    <title>eShiksha</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="eShiksha offers courses in AI, Data Science, Cloud, and Cyber Security. Learn the latest technologies with our expert instructors.">
+    <meta name="keywords" content="eShiksha, AI course, Data Science course, Cloud course, Cyber Security course, online courses, technology education, e-learning, machine learning, artificial intelligence, data analysis, cloud computing, cybersecurity training, technology skills, IT skills, learn coding, programming languages, machine learning algorithms, data analysis techniques, cloud solutions, network security, online tutorials, professional development, IT career, eShiksha courses,Jobs, jobs near me, how do i get into IT, how to become a data scientist, how to become a data Analyst, How to become cloud engineer, How to become cybersecurity engineer,IT Vedant, Ghatkopar, IT, IT education">
+    <meta name="author" content="eShiksha">
+
+    <meta property="og:title" content="eShiksha: Learn AI, Data Science, Cloud, and Cyber Security">
+    <meta property="og:description" content="Join eShiksha's online courses to master AI, Data Science, Cloud, and Cyber Security. Expert-led training for the latest technologies.">
+    <!-- <meta property="og:image" content="https://example.com/eshiksha-image.jpg"> Add URL to your image -->
+    <meta property="og:url" content="https://www.eshiksha.ai">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="../static/images/log.webp">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/e4f8bd703b.js" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="{% static 'css/flaticon.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-68NM87NT3J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-68NM87NT3J');
+</script>
+
+<script>
+  document.onkeydown = function (e) {
+    if (event.keyCode == 123) {
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+      return false;
+    }
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+      return false;
+    }
+  }
+</script>
+
+  </head>
+  <!-- oncontextmenu="return false;" -->
+
+  <body class="p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      style="background-color: #000 !important; top:0px !important; padding-top:0px !important; padding-bottom:0px !important;"
+      id="ftco-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="background: transparent;" href="{% url 'onlineapp:index' %}">
+          <img height="auto" width="100" src="{% static 'images/log.webp' %}" alt="eshikshalogo" style=" height: 63px;
+          width: 67px;"><span style="color: white;">
+            <span style="color:goldenrod">e</span>Shiksha
+          </span>
+
+        </a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+          aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span>Menu
+        </button> -->
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#ftco-nav"
+    aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars fa-1x"></i></span></button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            {% comment %} {{request.path}} {% endcomment %}
+            <li class="nav-item {% if request.path == '/' %} active {% endif %}"><a href="{% url 'onlineapp:index' %}" class="nav-link">Home</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Courses
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item sid1" href="{% url 'onlineapp:coursedataanalytics' %}">Data Science</a>
+                <a class="dropdown-item sid1" href="{% url 'onlineapp:courses' %}">AI/ML</a>
+                <a class="dropdown-item sid1" href="{% url 'onlineapp:coursecloudcomputing' %}">Cloud</a>
+                <a class="dropdown-item sid1" href="{% url 'onlineapp:coursecybersecurity' %}">Cyber Security</a>
+              </div>
+            </li>
+            <li class="nav-item sid2 {% if request.path == '/about_us' %} active {% endif %}"><a href="{% url 'onlineapp:about_us' %}" class="nav-link">About Us</a></li>
+                
+            <li class="nav-item sid2 {% if request.path == '/blogger' %} active {% endif %}"><a href="{% url 'onlineapp:blogger' %}" class="nav-link">blogs</a></li>
+
+            <!-- <li class="nav-item"><a href="/viewall_courses" class="nav-link">Courses</a></li> -->
+            <li class="nav-item">
+
+              <a href="#!" class="nav-link">
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1" style="font-size: 18px;
+                  padding-left: 20px;
+                  padding-right: 20px;
+                  color: #fff; 
+                  font-weight: 500;
+                  opacity: 1 !important;">Enroll Now</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div style="display:none; overflow-y:auto;" id="once-popup">
+      <div class="inner" style="transform: translate(0%, 40%); background:rgba(0, 0, 0, 0.9)">
+        <div id="popup-close">×</div>
+        <div class="row mb-2 mt-4 justify-content-center align-items-center">
+          <div class="col-lg-9 col-md-8 mx-auto">
+            <img src="{% static 'images/log.png' %}" width="30%" height="auto" alt="eshikshalogo">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <h5 class="text-white text-center px-4">Our skilled career mentors are here to brighten your route to a successful future</h5>
+          <div class="col-lg-12 col-md-9 d-block">
+            <form id="popup-form" action="{% url 'onlineapp:sid' %}" method="POST">
+              {% csrf_token %}
+                <div class="d-flex flex-column flex-lg-row justify-content-between">
+                  <div class="mb-3 mx-2 text-left">
+                      <label for="phonename" class="form-label text-white">Full Name</label>
+                      <input type="text" class="form-control" id="phonename" name="phonename" placeholder="Enter Your Name">
+                  </div>
+                  <div class="mb-3 mx-2 text-left">
+                      <label for="mobile-input" class="form-label text-white">Mobile No.</label>
+                      <input type="tel" class="form-control" id="mobile-input" name="phonedata" placeholder="Enter Mobile Number">
+                  </div>
+                  <div class="mb-3 mx-2 text-left">
+                      <label for="emailphone" class="form-label text-white">Email</label>
+                      <input type="email" class="form-control" id="emailphone" name="emailphone" placeholder="Enter Your Email">
+                  </div>
+                </div>
+                <button class="btn btn-primary px-5" type="submit" id="connect-btn">Connect Us</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- END nav -->
+    {% block content %}
+
+    {% endblock %}
+  
+    <form method="POST" action="{% url 'onlineapp:chatview' %}">
+      {% csrf_token %}
+      <div class="container">
+        <div class="row">
+
+          <div id="chat-circle" class=" btn-raised">
+            <svg class="icon-speech" viewBox="0 0 48 48">
+              <use xlink:href="#icon-speech" />
+            </svg>
+          </div>
+
+          <div class="chatbot chatbot--closed ">
+            <div class="chatbot__header pt-3 pb-3">
+              <div class="d-flex align-items-baseline" style="gap: 20px;">
+                <div class="imgsd">
+                  <img src="{% static 'images/log.webp' %}" alt="eshikshalogo1" height="50" width="50"
+                    style="padding:3px; ;border : 2px solid goldenrod; border-radius:100%;">
+                </div>
+                <div class="logotext">
+                  <p><strong class="text-white"><span style="color : goldenrod;">e</span>Shiksha</strong></p>
+                </div>
+              </div>
+              <svg class="chatbot__close-button icon-speech" viewBox="0 0 32 32">
+                <use xlink:href="#icon-speech" />
+              </svg>
+              <svg class="chatbot__close-button icon-close" viewBox="0 0 32 32" id="ss">
+                <use xlink:href="#icon-close" />
+              </svg>
+            </div>
+            <div class="chatbot__message-window">
+              <ul class="chatbot__messages">
+                <li class="is-ai animation" id="first">
+                  <div class="is-ai__profile-picture">
+                    <img src="{% static 'images/log.webp' %}" alt="eshikshalogo1" height="50px" width="50px"
+                      style="background-color: black;border-radius: 100%; border:2px solid goldenrod;padding: 3px;">
+                  </div>
+                  <span class="chatbot__arrow chatbot__arrow--left"></span>
+                  <p class="chatbot__message"><strong class="intro">Hello ! I am Ebot, please enter your Name and
+                      Email.</strong></p>
+                </li>
+                <li class="is-ai animation" id="chatform">
+                  <div class="is-ai__profile-picture">
+                    <img src="{% static 'images/log.webp' %}" alt="eshikshalogo1" height="50px" width="50px"
+                      style="background-color: black;border-radius: 100%; border:2px solid goldenrod;padding: 3px;">
+                  </div>
+                  <span class="chatbot__arrow chatbot__arrow--left"></span>
+                  <p class="chatbot__message">
+                    <label for="chatname" class="col-form-label">Name</label>
+                    <input type="text" id="chatname" class="form-control" name="chatname"
+                      aria-describedby="passwordHelpInline" required>
+
+                    <label for="chatname" class="col-form-label">Phone No.</label>
+                    <input type="text" id="chatphone" class="form-control" name="chatphone"
+                      aria-describedby="passwordHelpInline" required>
+
+
+                    <label for="inputPassword6" class="col-form-label">Email</label>
+                    <input type="email" id="inputPassword6" class="form-control" name="chatmail"
+                      aria-describedby="passwordHelpInline" required>
+
+                    <button type="button" class="btn btn-warning btn-sm" style="margin-top: 13px;"
+                      id="submitdata1">Submit</button>
+                  </p>
+                </li>
+                <li class="is-ai animation" style="display: none;" id="thankyou">
+                  <div class="is-ai__profile-picture">
+                    <img src="{% static 'images/log.webp' %}" alt="eshikshalogo1" height="50px" width="50px"
+                      style="background-color: black;border-radius: 100%; border:2px solid goldenrod;padding: 3px;">
+                  </div>
+                  <span class="chatbot__arrow chatbot__arrow--left"></span>
+                  <p class="chatbot__message">Hey <span id="cname"></span> Thank you for Submiting!...</p>
+                </li>
+
+                <li class="is-ai animation" style="display: none;" id="2button">
+                  <div class="is-ai__profile-picture">
+                    <img src="{% static 'images/log.webp' %}" alt="eshikshalogo1" height="50px" width="50px"
+                      style="background-color: black;border-radius: 100%; border:2px solid goldenrod;padding: 3px;">
+                  </div>
+                  <span class="chatbot__arrow chatbot__arrow--left"></span>
+                  <p class="chatbot__message">
+                    Press! one of the button to know our courses and about us.<br>
+                    <button type="button" class="btn btn-warning" style="margin-top: 13px;" id="Courses">Course</button>
+                    <button type="button" class="btn btn-warning" style="margin-top: 13px;"><a href="{% url 'onlineapp:about_us' %}">About
+                        Us</a></button>
+                  </p>
+                </li>
+                <li class="is-ai animation" style="display: none ;" id="4button">
+                  <div class="is-ai__profile-picture">
+                    <img src="{% static 'images/log.webp' %}" alt="eshikshalogo1" height="50px" width="50px"
+                      style="background-color: black;border-radius: 100%; border:2px solid goldenrod;padding: 3px;">
+                  </div>
+                  <span class="chatbot__arrow chatbot__arrow--left"></span>
+                  <p class="chatbot__message">Select one of our courses!<br>
+                    <span class="row">
+                      <button type="button" class="btn btn-warning btn-sm" style="margin-top: 13px;"><a
+                          href="{% url 'onlineapp:coursedataanalytics' %}">Data Science</a></button>
+                      <button type="button" class="btn btn-warning btn-sm" style="margin-top: 13px;"><a
+                          href="{% url 'onlineapp:coursecloudcomputing' %}">Cloud</a></button>
+                      <button type="button" class="btn btn-warning btn-sm" style="margin-top: 13px;"><a
+                          href="{% url 'onlineapp:coursecybersecurity' %}">Cyber Security</a></button>
+                      <button type="button" class="btn btn-warning btn-sm" style="margin-top: 13px;"><a
+                          href="{% url 'onlineapp:courses' %}">AI /
+                          ML</a></button>
+                    </span>
+                  </p>
+                </li>
+
+
+                <!-- Message here -->
+              </ul>
+            </div>
+            <div class="chatbot__entry chatbot--closed">
+              <input type="text" class="chatbot__input" placeholder="Write a message..." />
+              <svg class="chatbot__submit" viewBox="0 0 32 32">
+                <use xlink:href="#icon-send" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Symbols -->
+          <svg class="d-none">
+            <!-- Close icon -->
+            <symbol id="icon-close" viewBox="0 0 32 32">
+              <title>Close</title>
+              <path d="M2.624 8.297l2.963-2.963 23.704 23.704-2.963 2.963-23.704-23.704z" />
+              <path d="M2.624 29.037l23.704-23.704 2.963 2.963-23.704 23.704-2.963-2.963z" />
+            </symbol>
+
+            <!-- Speech icon -->
+            <symbol id="icon-speech" viewBox="0 0 32 32">
+              <title>Speech</title>
+              <path style="fill: #ffffff; fill-rule: evenodd;"
+                d="M21.795 5.333h-11.413c-0.038 0-0.077 0-0.114 0l-0.134 0.011v2.796c0.143-0.006 0.273-0.009 0.385-0.009h11.277c0.070 0 7.074 0.213 7.074 7.695 0 5.179-2.956 7.695-9.036 7.695h-3.792c-0.691 0-1.12 0.526-1.38 1.159l-1.387 3.093-1.625 3.77 0.245 0.453h2.56l2.538-5.678h2.837c7.633 0 11.84-3.727 11.84-10.494 0.001-8.564-7.313-10.492-9.875-10.492z" />
+              <path style="fill: #ffffff; fill-rule: evenodd;"
+                d="M10.912 24.259c-0.242-0.442-0.703-0.737-1.234-0.737-0 0-0 0-0 0h-0.56c-0.599-0.011-1.171-0.108-1.71-0.28l0.042 0.012c-1.82-0.559-4.427-2.26-4.427-7.424 0-6.683 5.024-7.597 7.109-7.686v-2.8c-2.042 0.095-9.91 1.067-9.91 10.483 0 4.832 1.961 7.367 3.606 8.64 1.38 1.067 3.109 1.744 4.991 1.843l0.033 0.019 2.805 5.211 1.41-3.273z" />
+            </symbol>
+
+            <!-- Send icon -->
+            <symbol id="icon-send" viewBox="0 0 23.97 21.9">
+              <title>Send</title>
+              <path d="M0.31,9.43a0.5,0.5,0,0,0,0,.93l8.3,3.23L23.15,0Z" />
+              <path d="M9,14.6H9V21.4a0.5,0.5,0,0,0,.93.25L13.22,16l6,3.32A0.5,0.5,0,0,0,20,19l4-18.4Z" />
+            </symbol>
+
+            <!-- Avatar icon -->
+            <symbol id="avatar" width="44.25" height="44" viewBox="0 0 44.25 44">
+              <title>Avatar</title>
+
+            </symbol>
+
+          </svg>
+        </div>
+      </div>
+    </form>
+
+    <div class="container">
+      <div class="row">
+        <div class="whatsapp-chat">
+          <input type="checkbox" id="whatsapp-chat-toggler" class="whatsapp-chat-toggler">
+
+          <label for="whatsapp-chat-toggler" class="whatsapp-chat-backdrop"></label>
+
+          <div class="whatsapp-chat-window">
+            <div class="whatsapp-chat-header">
+              <img src="{% static 'images/log.webp' %}" alt="eshikshalogo2" class="whatsapp-chat-contact-img">
+              <div class="whatsapp-chat-contact-info">
+                <strong>eShiksha</strong>
+                <small>
+                  Support
+                  •
+                  <span class="text-wa-light-green">Online</span>
+                </small>
+              </div>
+              <label for="whatsapp-chat-toggler" title="Fechar o chat do WhatsApp" class="whatsapp-chat-close">
+                <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M42.5467 12.4536C43.2627 13.1696 43.2627 14.3304 42.5467 15.0464L15.0467 42.5464C14.3307 43.2623 13.1699 43.2623 12.454 42.5464C11.738 41.8304 11.738 40.6696 12.454 39.9536L39.954 12.4536C40.6699 11.7377 41.8307 11.7377 42.5467 12.4536Z"
+                    fill="currentColor" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.454 12.4536C13.1699 11.7377 14.3307 11.7377 15.0467 12.4536L42.5467 39.9536C43.2627 40.6696 43.2627 41.8304 42.5467 42.5464C41.8307 43.2623 40.6699 43.2623 39.954 42.5464L12.454 15.0464C11.738 14.3304 11.738 13.1696 12.454 12.4536Z"
+                    fill="currentColor" />
+                </svg>
+              </label>
+            </div>
+            <div class="whatsapp-chat-body">
+              <p class="whatsapp-chat-bubble">
+                Hello, i am Ebot. <br>
+                Please provide your details and we will respond as soon as possible!
+              </p>
+              <form>
+                <label for="whatsapp-name" class="whatsapp-chat-green-bubble">
+                  <input type="text" id="whatsapp-name" placeholder="Your name" required class="whatsapp-chat-input">
+                  <span class="error">
+                    <span class="error-text">
+                      This field is required
+                    </span>
+                    <svg class="error-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512">
+                      <path
+                        d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z" />
+                    </svg>
+                  </span>
+                </label>
+                <label for="whatsapp-email" class="whatsapp-chat-green-bubble">
+                  <input type="text" id="whatsapp-email" placeholder="Your email" required class="whatsapp-chat-input">
+                  <span class="error">
+                    <span class="error-text">
+                      This field is required
+                    </span>
+                    <svg class="error-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512">
+                      <path
+                        d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z" />
+                    </svg>
+                  </span>
+                </label>
+                <label for="whatsapp-phone" class="whatsapp-chat-green-bubble">
+                  <input type="tel" id="whatsapp-phone" placeholder="Your phone number" required
+                    class="whatsapp-chat-input">
+                  <span class="error">
+                    <span class="error-text">
+                      This field is required
+                    </span>
+                    <svg class="error-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512">
+                      <path
+                        d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z" />
+                    </svg>
+                  </span>
+                </label>
+
+                <button type="submit" class="whatsapp-chat-btn">
+                  Send message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <label for="whatsapp-chat-toggler" class="whatsapp-chat-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.4054 3.4875C18.1607 1.2375 15.1714 0 11.9946 0C5.4375 0 0.101786 5.33571 0.101786 11.8929C0.101786 13.9875 0.648214 16.0339 1.6875 17.8393L0 24L6.30536 22.3446C8.04107 23.2929 9.99643 23.7911 11.9893 23.7911H11.9946C18.5464 23.7911 24 18.4554 24 11.8982C24 8.72143 22.65 5.7375 20.4054 3.4875ZM11.9946 21.7875C10.2161 21.7875 8.475 21.3107 6.95893 20.4107L6.6 20.1964L2.86071 21.1768L3.85714 17.5286L3.62143 17.1536C2.63036 15.5786 2.11071 13.7625 2.11071 11.8929C2.11071 6.44464 6.54643 2.00893 12 2.00893C14.6411 2.00893 17.1214 3.0375 18.9857 4.90714C20.85 6.77679 21.9964 9.25714 21.9911 11.8982C21.9911 17.3518 17.4429 21.7875 11.9946 21.7875ZM17.4161 14.3839C17.1214 14.2339 15.6589 13.5161 15.3857 13.4196C15.1125 13.3179 14.9143 13.2696 14.7161 13.5696C14.5179 13.8696 13.95 14.5339 13.7732 14.7375C13.6018 14.9357 13.425 14.9625 13.1304 14.8125C11.3839 13.9393 10.2375 13.2536 9.08571 11.2768C8.78036 10.7518 9.39107 10.7893 9.95893 9.65357C10.0554 9.45536 10.0071 9.28393 9.93214 9.13393C9.85714 8.98393 9.2625 7.52143 9.01607 6.92679C8.775 6.34821 8.52857 6.42857 8.34643 6.41786C8.175 6.40714 7.97679 6.40714 7.77857 6.40714C7.58036 6.40714 7.25893 6.48214 6.98571 6.77679C6.7125 7.07679 5.94643 7.79464 5.94643 9.25714C5.94643 10.7196 7.0125 12.1339 7.15714 12.3321C7.30714 12.5304 9.25179 15.5304 12.2357 16.8214C14.1214 17.6357 14.8607 17.7054 15.8036 17.5661C16.3768 17.4804 17.5607 16.8482 17.8071 16.1518C18.0536 15.4554 18.0536 14.8607 17.9786 14.7375C17.9089 14.6036 17.7107 14.5286 17.4161 14.3839Z"
+                fill="currentColor" />
+            </svg>
+          </label>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="ftco-footer ftco-no-pt p-0">
+      <div class="container-fluid" style="margin: 0 auto; max-width:1550px;">
+        <div class="row">
+          <div class="col-md col-lg-4 pt-1">
+            <div class="ftco-footer-widget pt-md-5 mb-2">
+              <h2 class="ftco-heading-2 mb-3">TALK TO OUR CAREER EXPERTS</h2>
+              <p class="text-justify">Speak with our dedicated counsellors <br> to receive personalized career guidance.
+              </p>
+            </div>
+          </div>
+          <div class="col-md col-lg-2 pt-1 pl-5">
+            <div class="ftco-footer-widget pt-md-5 mb-4">
+              <h2 class="ftco-heading-2 mb-2">COURSES</h2>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'onlineapp:coursedataanalytics' %}" class="py-1 d-block">Data Science</a></li>
+                <li><a href="{% url 'onlineapp:courses' %}" class="py-1 d-block">AI/ML</a></li>
+                <li><a href="{% url 'onlineapp:coursecloudcomputing' %}" class="py-1 d-block">Cloud</a></li>
+                <li><a href="{% url 'onlineapp:coursecybersecurity' %}" class="py-1 d-block">Cyber Security</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-md col-lg-3 pt-1 pl-5">
+            <div class="ftco-footer-widget pt-md-5 mb-4">
+              <h2 class="ftco-heading-2 mb-2">RESOURCES</h2>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'onlineapp:privacy' %}" class="py-1 d-block">Privacy Policy</a></li>
+                <li><a href="{% url 'onlineapp:terms' %}" class="py-1 d-block">Terms of Use</a></li>
+                <li><a href="{% url 'onlineapp:blogsingle' %}" class="py-1 d-block">Blogs</a></li>
+                <li><a href="{% url 'onlineapp:events' %}" class="py-1 d-block">Events</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md col-lg-3 pt-1">
+            <div class="ftco-footer-widget pt-md-5 mb-4">
+              <h2 class="ftco-heading-2 mb-3">GET IN TOUCH</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon fa fa-map-marker"></span><span class="text">A-301, Raheja Plaza, Ghatkopar (W),
+                      Mumbai, Maharashtra, India - 400086</span></li>
+                  <li><span class="icon fa fa-phone"></span><a href="tel:8657573337"><span class="text">+91 8657 573 337</span></a>
+                  </li>
+                  <li><span class="icon fa fa-paper-plane"></span><a href="mailto:learn@eshiksha.ai"><span
+                        class="text">learn@eshiksha.ai</span></a></li>
+                  <ul class="ftco-footer-social d-flex list-unstyled float-md-left float-lft" style="flex-wrap: wrap;">
+                    <li class="ftco-animate"><a target="_blank"
+                        href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100094225110178&data=05%7C01%7Crushali.deo%40cloudstrats.com%7C4e53f75211fc48a908b508db764a2330%7Cd4299a9595154322bee7f48ae88f5987%7C0%7C0%7C638233833005877863%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=xX1IqSHx2RhOl4gVxhf8fYaw6qBR1gXhioDMlaZcGjE%3D&reserved=0"><span
+                          class="fa fa-facebook"></span></a></li>
+                    <li class="ftco-animate"><a target="_blank" href="https://www.instagram.com/eshiksha.ai"><span
+                          class="fa fa-instagram"></span></a></li>
+                    <li class="ftco-animate"><a target="_blank"
+                        href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftwitter.com%2FEshikshaAi&data=05%7C01%7Crushali.deo%40cloudstrats.com%7C4e53f75211fc48a908b508db764a2330%7Cd4299a9595154322bee7f48ae88f5987%7C0%7C0%7C638233833005877863%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=K5xaxrKKDbPmPucAjSsB7WUJ2MpMyXX6LxiMiB%2F47h0%3D&reserved=0"><span
+                          class="fa fa-twitter"></span></a></li>
+                    <li class="ftco-animate"><a target="_blank"
+                        href="https://ind01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Feshiksha-ai-a678b5280%2F&data=05%7C01%7Crushali.deo%40cloudstrats.com%7C4e53f75211fc48a908b508db764a2330%7Cd4299a9595154322bee7f48ae88f5987%7C0%7C0%7C638233833005877863%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=9QpH7f%2FPHkbjT%2FsFDgRD%2BotejpL9ITxsaqS2XcwEIkA%3D&reserved=0"><span
+                          class="fa fa-linkedin"></span></a></li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10 col-md-6 col-sm-5 mx-auto text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> All rights reserved eShiksha
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog  modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body border-0" style="padding: 2rem 0rem 2rem 1rem !important;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="    position: relative;
+            right: 40px;
+            z-index: 10;
+            top: 4px;color:white !important;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <div class="row justify-content-center">
+              <!-- <div class="col-lg-6 border-0 col-md-12 mb-3 order-md-last d-flex align-items-stretch border">
+                <div class="contact-wrap w-100 p-md-5 p-5">
+                  
+
+                </div>
+              </div> -->
+              <div class="col-lg-12 col-md-12 d-flex align-items-stretch">
+                <div class="info-wrap bg-primary w-100 p-md-5 px-lg-5 pt-lg-5 pb-lg-0 pt-md-0"
+                  style="background-color: #000 !important;">
+                  <div class="text-center d-flex justify-content-center align-items-center">
+                    <img src="{% static 'images/logbg.webp' %}" width="120" height="auto" alt="logobg">
+                  </div>
+                  <h3 class="mb-3 text-center mt-3">Enroll Now</h3>
+                  <form action="enroll_data/" method="post" id="contactForm" name="contactForm" class="contactForm1">
+                    {% csrf_token %}
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="label text-white" for="name">Full Name</label>
+                          <div class="input-wrapper">
+                            <input type="text" class="form-control" name="ename" id="ename" placeholder="Name">
+                            <div id="FullNameErr"></div>
+                            <span id="FullNamecheck"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="label text-white" for="email">Email Address</label>
+                          <div class="input-wrapper">
+
+                            <input type="email" class="form-control" name="eemail" id="eemail" placeholder="Email">
+                            <div id="EmailenrollErr"></div>
+                            <span id="Emailenrollcheck"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="label text-white" for="phone">Mobile No</label>
+                          <div class="input-wrapper">
+
+                            <input type="tel" class="form-control" name="ephone" id="ephone" placeholder="Mobile No">
+                            <div id="MobileEnrollErr"></div>
+                            <span id="MobileEnrollcheck"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="label text-white" for="eexampleRadios">Select Course</label>
+                          <div class="input-wrapper">
+
+                            <select class="form-control" id="exampleFormControlSelect1" name="eexampleRadios">
+                              <option value="" selected>--Select Course--</option>
+                              <option value="Data Science">Data Science</option>
+                              <option value="AI/ML">AI/ML</option>
+                              <option value="Cloud Computing">Cloud</option>
+                              <option value="Cybersecurity">Cyber Security</option>
+                            </select>
+                            <div id="DropErr"></div>
+                            <span id="Dropcheck"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mx-auto my-4">
+                        <div class="form-group">
+                          <button type="submit" id="submit1" class="btn btn-primary px-5" data-toggle="modal"
+                            data-target="#exampleModalLive">Submit</button>
+                          <div class="submitting"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                  <!-- <h5 style="text-align: left;" class="mt-5 text-white text-justify">We're just a phone call away, ready
+                    to help you with any inquiries or concerns you may have. </h5> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal black-white-gold-theme" id="exampleModalLive" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">eShisksha</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Thank you for enrolling...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" id="scroll" style="display: none;"><span></span></a>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+          stroke="#F96D00" />
+      </svg></div>
+
+
+
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/scrollax.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+      integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      $(document).ready(function () {
+    // Check if the popup has been shown before using local storage
+    var isFormSubmitted = localStorage.getItem('isFormSubmitted') === 'true';
+    var serverReceivedData = false; // Assume the server has not received data initially
+
+    function showPopup() {
+      // Skip showing the popup if the form has been submitted or if the server received data
+      if (!isFormSubmitted && !serverReceivedData) {
+        $("#once-popup").fadeIn();
+      }
+    }
+
+    function resetPopupTimer() {
+      setTimeout(function () {
+        showPopup();
+        resetPopupTimer();
+      }, 300000); // Show the popup every 30 seconds (30000 milliseconds)
+    }
+
+    // Start showing the popup after 2000 milliseconds (2 seconds)
+    setTimeout(function () {
+      showPopup();
+      resetPopupTimer();
+    }, 10000);
+
+    $('.sid1, .sid2').click(function () {
+      $('#once-popup').hide();
+    });
+
+    $('#popup-close').click(function () {
+      $('#once-popup').fadeOut();
+      resetPopupTimer(); // Restart the timer after the popup is dismissed
+    });
+
+    // Remove red border color when typing in the input fields
+    $('#mobile-input').on('input', function() {
+      $(this).css('border-color', '');
+    });
+
+    $('#phonename').on('input', function() {
+      $(this).css('border-color', '');
+    });
+
+    $('#emailphone').on('input', function() {
+      $(this).css('border-color', '');
+    });
+
+    // Click event for form submission
+    $('#connect-btn').click(function (e) {
+      e.preventDefault();
+      var mobileNumber = $('#mobile-input').val();
+      var fullName = $('#phonename').val();
+      var email = $('#emailphone').val();
+      
+      console.log('Mobile Number:', mobileNumber);
+      console.log('Full Name:', fullName);
+      console.log('Email:', email);
+      
+      var mobileNumberRegex = /^\d{10}$/;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      var isFormValid = true;
+      
+      if (!mobileNumberRegex.test(mobileNumber)) {
+        console.log('Invalid mobile number! Please enter a valid 10-digit mobile number.');
+        $('#mobile-input').css('border-color', 'red');
+        isFormValid = false;
+      }
+      
+      if (!emailRegex.test(email)) {
+        console.log('Invalid email! Please enter a valid email address.');
+        $('#emailphone').css('border-color', 'red');
+        isFormValid = false;
+      }
+      
+      if (fullName.trim() === '') {
+        console.log('Full name is required!');
+        $('#phonename').css('border-color', 'red');
+        isFormValid = false;
+      }
+      
+      if (isFormValid) {
+        localStorage.setItem('isFormSubmitted', 'true');
+        setTimeout(function () {
+          serverReceivedData = true;
+        }, 1000);
+        $("#once-popup").fadeOut();
+        resetPopupTimer();
+        $('#popup-form').submit();
+      }
+    });
+
+      });
+    </script>
+    <script>
+      
+//   video js
+$(document).ready(function () {
+    // get video source from data-src button
+    var $videoSrc;
+    $('.video-btn').click(function () {
+      $videoSrc = $(this).data("src");
+    });
+    console.log($videoSrc);
+    // autoplay video on modal load  
+    $('#myModal').on('shown.bs.modal', function (e) {
+      // youtube iframe configuration and settings
+      $("#video").attr('src', $videoSrc + "?autoplay=1&rel=0&controls=1&loop=1&modestbranding=1");
+    })
+    // stop playing the youtube video when modal closed
+    $('#myModal').on('hide.bs.modal', function (e) {
+      // stop video
+      $("#video").attr('src', $videoSrc);
+    })
+  });
+    </script>
+
+    <script>
+      
+// accordian
+init__accordion();
+
+      // Accordion
+      function init__accordion() {
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
+        // https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#parameters
+        let accordionItems = document.querySelectorAll('.accordion-tab');
+        if (accordionItems.length > 0) {
+          const speed = 250;
+          const animationOptions = { duration: speed, iterations: 1, fill: "forwards" };
+
+          // Handle Accordion On Init
+          let init_true = document.querySelector('.accordion-tab[aria-selected="true"]');
+          if (init_true) {
+            let init_content = init_true.querySelector('.content');
+            let init_content_parent = init_content.closest('.accordion-content');
+            let init_content_height = init_content.clientHeight + 'px';
+
+            let openKeyframes = [{ height: init_content_height }];
+            init_content_parent.animate(openKeyframes, animationOptions);
+          }
+
+          // Handle Accordion On Click
+          accordionItems.forEach(item => {
+            item.addEventListener('click', e => {
+
+
+              // Check if target is content. If content then exit.
+              let tab_content = e.target.classList.contains('accordion-content');
+
+              if (tab_content) { return false; }
+
+              // Previous Active
+              let prev_tab = document.querySelector('.accordion-tab[aria-selected="true"]');
+              let prev_tab_content = null;
+              prev_tab ? prev_tab_content = prev_tab.querySelector('.accordion-content') : null;
+
+              // Current Active
+              let curr_tab = e.target.closest('.accordion-tab');
+              let curr_content = curr_tab.querySelector('.content');
+              let curr_content_parent = curr_content.closest('.accordion-content');
+              let curr_content_height = curr_content.clientHeight + 'px';
+
+              // Animation
+              let openKeyframes = [{ height: curr_content_height }];
+              let closeKeyframes = [{ height: '0px' }];
+
+              // Checking if this tab is already active
+              let alreadyActive = curr_tab.getAttribute('aria-selected');
+
+              // If there is an active tab, then close it
+              prev_tab ? prev_tab_content.animate(closeKeyframes, animationOptions) : null;
+
+              // Change Current Active
+              if (alreadyActive == 'true') {
+                // Close Current Tab
+                curr_tab.setAttribute('aria-selected', false);
+              } else {
+                // Close Previous Open
+                prev_tab ? prev_tab.setAttribute('aria-selected', false) : null;
+
+                // Open Current Tab
+                curr_tab.setAttribute('aria-selected', true);
+                curr_content_parent.animate(openKeyframes, animationOptions);
+              }
+            });
+          });
+        }
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        var phoneExpr = /^[0-9]{10}$/;
+
+        // Title validation
+        $('#FullNamecheck').hide();
+        var FullNameErr = true;
+
+        $('#ename').keyup(function () {
+          FullNamecheck();
+        });
+
+        function FullNamecheck() {
+          let nameVal = $('#ename').val();
+          if (nameVal == '' || nameVal == null) {
+            console.log("lkjhgfcx")
+            $('#FullNamecheck').show();
+            $('#FullNamecheck').html('Enter Your Full Name');
+            $('#FullNamecheck').css("color", "red");
+            $('#FullNamecheck').css("font-size", "15px");
+
+            FullNameErr = false;
+            return false;
+          }
+          else {
+            $('#FullNamecheck').hide();
+          }
+        }
+
+        // Email Validation
+        $('#Emailenrollcheck').hide();
+        var EmailenrollErr = true;
+
+        $('#eemail').keyup(function () {
+          Emailenrollcheck();
+        });
+
+        function Emailenrollcheck() {
+          let Emailval = $('#eemail').val();
+          if (Emailval == '' || Emailval == null || !expr.test(Emailval)) {
+            $('#Emailenrollcheck').show();
+            $('#Emailenrollcheck').html('Enter Correct Email');
+            $('#Emailenrollcheck').css("color", "red");
+            $('#Emailenrollcheck').css("font-size", "15px");
+
+            EmailenrollErr = false;
+            return false;
+          }
+          else {
+            $('#Emailenrollcheck').hide();
+          }
+        }
+
+        // Department Validation
+        $('#MobileEnrollcheck').hide();
+        var MobileEnrollErr = true;
+
+        $('#ephone').on('change', function () {
+          MobileEnrollcheck();
+          console.log("changed")
+        });
+
+        function MobileEnrollcheck() {
+          let ephoneVal = $('#ephone').val();
+          if (ephoneVal == '' || ephoneVal == null || !phoneExpr.test(ephoneVal)) {
+            console.log("lkjhgfcx")
+            $('#MobileEnrollcheck').show();
+            $('#MobileEnrollcheck').html('Enter Your Mobile Number');
+            $('#MobileEnrollcheck').css("color", "red");
+            $('#MobileEnrollcheck').css("font-size", "15px");
+
+            MobileEnrollErr = false;
+            return false;
+          }
+          else {
+            $('#MobileEnrollcheck').hide();
+          }
+        }
+
+        // Dropdown Validation
+        $('#Dropcheck').hide();
+        var DropErr = true;
+
+        $('#exampleFormControlSelect1').on('change', function () {
+          Dropcheck();
+        });
+
+        function Dropcheck() {
+          let dropdownVal = $('#exampleFormControlSelect1').val();
+          if (dropdownVal == '' || dropdownVal == null) {
+            $('#Dropcheck').show();
+            $('#Dropcheck').html('Select a Course');
+            $('#Dropcheck').css("color", "red");
+            $('#Dropcheck').css("font-size", "15px");
+
+            DropErr = false;
+            return false;
+          } else {
+            $('#Dropcheck').hide();
+          }
+        }
+
+
+
+        $('#submit1').click(function () {
+          var returnRequired = $('#membershipRadios1').is(':checked');
+          console.log(returnRequired)
+
+          if (returnRequired == true) {
+            FullNameErr = true;
+            EmailenrollErr = true;
+            MobileEnrollErr = true;
+            DropErr = true;
+
+            FullNamecheck();
+            Emailenrollcheck();
+            MobileEnrollcheck();
+            Dropcheck();
+
+
+
+            if ((FullNameErr == true) && (EmailenrollErr == true) && (MobileEnrollErr == true) && (DropErr == true)) {
+              return true;
+            } else {
+              return false;
+            }
+          } else {
+            FullNameErr = true;
+            EmailenrollErr = true;
+            MobileEnrollErr = true;
+            DropErr = true;
+
+
+            FullNamecheck();
+            Emailenrollcheck();
+            MobileEnrollcheck();
+            Dropcheck();
+
+
+
+            if ((FullNameErr == true) && (EmailenrollErr == true) && (MobileEnrollErr == true) && (DropErr == true)) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        });
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js"></script>
+    <script>
+      const accessToken = "2d1ddeaadc20462dba88c9beebbe0a21";
+      const baseUrl = "https://api.api.ai/api/query?v=20150910";
+      const sessionId = "1";
+      const loader = `<span class='loader'><span class='loader__dot'></span><span class='loader__dot'></span><span class='loader__dot'></span></span>`;
+      const errorMessage = "My apologies, I'm not available at the moment. =^.^=";
+      const urlPattern = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
+      const loadingDelay = 700;
+      const aiReplyDelay = 1800;
+
+      const $document = document;
+      const $chatbot = $document.querySelector(".chatbot");
+      const $chatbotMessageWindow = $document.querySelector(
+        ".chatbot__message-window"
+      );
+      const $chatbotHeader = $document.querySelector(".chatbot__header");
+      const $chatbotMessages = $document.querySelector(".chatbot__messages");
+      const $chatbotInput = $document.querySelector(".chatbot__input");
+      const $chatbotSubmit = $document.querySelector(".chatbot__submit");
+
+      document.addEventListener(
+        "keypress",
+        event => {
+          if (event.which == 13) {
+            validateMessage();
+          }
+        },
+        false
+      );
+
+      $chatbotHeader.addEventListener(
+        "click",
+        () => {
+          // toggle($chatbot, "chatbot--closed");
+          // $chatbotInput.focus();
+          var element = document.getElementsByClassName("chatbot");
+          element[0].style.display = "none";
+          document.getElementById("chat-circle").style.display = "block";
+        },
+        false
+      );
+
+      $chatbotSubmit.addEventListener(
+        "click",
+        () => {
+          validateMessage();
+        },
+        false
+      );
+      document.getElementById("chat-circle").addEventListener(
+        "click",
+        () => {
+          var element = document.getElementsByClassName("chatbot");
+          element[0].classList.remove("chatbot--closed");
+          element[0].style.display = "block";
+          $chatbotInput.focus();
+          console.log(this);
+          document.getElementById("chat-circle").style.display = "none";
+
+        }
+      );
+      const toggle = (element, klass) => {
+        const classes = element.className.match(/\S+/g) || [],
+          index = classes.indexOf(klass);
+        index >= 0 ? classes.splice(index, 1) : classes.push(klass);
+        element.className = classes.join(" ");
+      };
+
+      const userMessage = content => {
+        $chatbotMessages.innerHTML += `<li class='is-user animation'>
+            <p class='chatbot__message'>
+              ${content}
+            </p>
+            <span class='chatbot__arrow chatbot__arrow--right'></span>
+          </li>`;
+      };
+
+      const aiMessage = (content, isLoading = false, delay = 0) => {
+        setTimeout(() => {
+          removeLoader();
+          $chatbotMessages.innerHTML += `<li 
+            class='is-ai animation' 
+            id='${isLoading ? "is-loading" : ""}'>
+              <div class="is-ai__profile-picture">
+                <svg class="icon-avatar" viewBox="0 0 32 32">
+                  <use xlink:href="#avatar" />
+                </svg>
+              </div>
+              <span class='chatbot__arrow chatbot__arrow--left'></span>
+              <div class='chatbot__message'>
+                ${content}
+              </div>
+            </li>`;
+          scrollDown();
+        }, delay);
+      };
+
+      const removeLoader = () => {
+        let loadingElem = document.getElementById("is-loading");
+        if (loadingElem) {
+          $chatbotMessages.removeChild(loadingElem);
+        }
+      };
+
+      const escapeScript = unsafe => {
+        const safeString = unsafe
+          .replace(/</g, " ")
+          .replace(/>/g, " ")
+          .replace(/&/g, " ")
+          .replace(/"/g, " ")
+          .replace(/\\/, " ")
+          .replace(/\s+/g, " ");
+        return safeString.trim();
+      };
+
+      const linkify = inputText => {
+        return inputText.replace(urlPattern, `<a href='$1' target='_blank'>$1</a>`);
+      };
+
+      const validateMessage = () => {
+        const text = $chatbotInput.value;
+        const safeText = text ? escapeScript(text) : "";
+        if (safeText.length && safeText !== " ") {
+          resetInputField();
+          userMessage(safeText);
+          send(safeText);
+        }
+        scrollDown();
+        return;
+      };
+
+      const multiChoiceAnswer = text => {
+        const decodedText = text.replace(/zzz/g, "'");
+        userMessage(decodedText);
+        send(decodedText);
+        scrollDown();
+        return;
+      };
+
+      const processResponse = val => {
+        removeLoader();
+
+        if (val.fulfillment) {
+          let output = "";
+          let messagesLength = val.fulfillment.messages.length;
+
+          for (let i = 0; i < messagesLength; i++) {
+            let message = val.fulfillment.messages[i];
+            let type = message.type;
+
+            switch (type) {
+              // 0 fulfillment is text
+              case 0:
+                let parsedText = linkify(message.speech);
+                output += `<p>${parsedText}</p>`;
+                break;
+
+              // 1 fulfillment is card
+              case 1:
+                // let imageUrl = message.imageUrl
+                // let imageTitle = message.title
+                // let imageSubtitle = message.subtitle
+                // output += `<img src='${imageUrl}' alt='${imageTitle}${imageSubtitle}' />`
+                break;
+
+              // 2 fulfillment is button list
+              case 2:
+                let title = message.title;
+                let replies = message.replies;
+                let repliesLength = replies.length;
+                output += `<p>${title}</p>`;
+
+                for (let i = 0; i < repliesLength; i++) {
+                  let reply = replies[i];
+                  let encodedText = reply.replace(/'/g, "zzz");
+                  output += `<button onclick='multiChoiceAnswer("${encodedText}")'>${reply}</button>`;
+                }
+
+                break;
+
+              // 3 fulfillment is image
+              case 3:
+                // console.log('Fulfillment is image - TODO')
+                break;
+            }
+          }
+
+          return output;
+        } else {
+          return val;
+        }
+      };
+
+      const setResponse = (val, delay = 0) => {
+        setTimeout(() => {
+          aiMessage(processResponse(val));
+        }, delay);
+      };
+
+      const resetInputField = () => {
+        $chatbotInput.value = "";
+      };
+
+      const scrollDown = () => {
+        const distanceToScroll =
+          $chatbotMessageWindow.scrollHeight -
+          ($chatbotMessages.lastChild.offsetHeight + 60);
+        $chatbotMessageWindow.scrollTop = distanceToScroll;
+        return false;
+      };
+
+      const send = (text = "") => {
+        fetch(`${baseUrl}&query=${text}&lang=en&sessionId=${sessionId}`, {
+          method: "GET",
+          dataType: "json",
+          headers: {
+            Authorization: "Bearer " + accessToken,
+            "Content-Type": "application/json; charset=utf-8"
+          }
+        })
+          .then(response => response.json())
+          .then(res => {
+            if (res.status < 200 || res.status >= 300) {
+              let error = new Error(res.statusText);
+              throw error;
+            }
+            return res;
+          })
+          .then(res => {
+            setResponse(res.result, loadingDelay + aiReplyDelay);
+          })
+          .catch(error => {
+            setResponse(errorMessage, loadingDelay + aiReplyDelay);
+            resetInputField();
+            console.log(error);
+          });
+
+        aiMessage(loader, true, loadingDelay);
+      };
+      $("#Courses").click(function () {
+        $("#chatbot").show();
+        $("#chatbot").show();
+
+      });
+      $("#submitdata").click(function () {
+        var data = $("#chatname").val();
+        $("#cname").html(data);
+        $("#2button").show();
+        $("#thankyou").show();
+        $("#first").hide();
+        $("#chatform").hide();
+
+
+
+
+
+      });
+      $("#Courses").click(function () {
+        $("#4button").show();
+
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Handle form submission
+        $("#submitdata1").click(function () {
+          // Validate the fields before submitting the form
+          var name = $("#chatname").val();
+          var email = $("#inputPassword6").val();
+          var phone = $("#chatphone").val(); // Add this line to fetch the phone value
+
+          // Define regex patterns
+          var nameRegex = /^[a-zA-Z\s]+$/;
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          var phoneRegex = /^[0-9]{10}$/; // Add a regex pattern for the phone
+
+          // Check if the Name field is empty or doesn't match the pattern
+          if (name === "" || !name.match(nameRegex)) {
+            addAsterisk($("#chatname"));
+          } else {
+            removeAsterisk($("#chatname"));
+          }
+
+          // Check if the Email field is empty or doesn't match the pattern
+          if (email === "" || !email.match(emailRegex)) {
+            addAsterisk($("#inputPassword6"));
+          } else {
+            removeAsterisk($("#inputPassword6"));
+          }
+
+          // Check if the Phone field is empty or doesn't match the pattern
+          if (phone === "" || !phone.match(phoneRegex)) {
+            addAsterisk($("#chatphone"));
+          } else {
+            removeAsterisk($("#chatphone"));
+          }
+
+          // Submit the form if all required fields are filled and valid
+          if (name !== "" && name.match(nameRegex) && email !== "" && email.match(emailRegex) && phone !== "" && phone.match(phoneRegex)) {
+            // Hide the current form section
+            $("#first").hide();
+            $("#chatform").hide();
+
+            // Show the thank-you message with the user's name
+            $("#cname").html(name);
+            $("#thankyou").show();
+
+            // Show the buttons section
+            $("#2button").show();
+
+            // Your form submission code using AJAX
+            $.ajax({
+              url: "{% url 'onlineapp:chatview' %}",
+              method: "POST",
+              data: {
+                'chatname': name,
+                'chatphone': phone,
+                'chatmail': email,
+                'csrfmiddlewaretoken': '{{ csrf_token }}',  // Include the CSRF token
+              },
+              success: function (response) {
+                if (response.success) {
+                  // Optionally, you can handle a successful response from the server here
+                } else {
+                  alert("Error: " + response.message);
+                }
+              },
+              error: function (xhr, status, error) {
+                console.error("Form submission failed: " + error);
+              }
+            });
+          }
+        });
+
+        // Function to add an asterisk after the label
+        function addAsterisk(element) {
+          var label = element.prev("label");
+          if (!label.hasClass("required")) {
+            label.addClass("required");
+            label.text(label.text() + " *");
+          }
+        }
+
+        // Function to remove the asterisk from the label
+        function removeAsterisk(element) {
+          var label = element.prev("label");
+          if (label.hasClass("required")) {
+            label.removeClass("required");
+            label.text(label.text().replace(" *", ""));
+          }
+        }
+      });
+    </script>
+  
+    <script>
+      // Function to open WhatsApp chat with user details
+      function openWhatsAppChat() {
+        const name = document.getElementById("whatsapp-name").value;
+        const email = document.getElementById("whatsapp-email").value;
+        const phone = document.getElementById("whatsapp-phone").value;
+        //const newsletter = document.getElementById("whatsapp-newsletter").checked;
+
+        // Check if all required fields are filled
+        if (!name || !email || !phone) {
+          alert("Please fill in all the required fields.");
+          return; // Prevent redirection if data is missing
+        }
+
+        // Replace the following phone number with the desired WhatsApp number
+        const phoneNumber = "8657573337";
+
+        // Create the WhatsApp message with user details
+        let message = "Hello, I am " + name + "\n";
+        message += "I visited the eShiksha website and discovered a course in which I am interested.  \n";
+       // message += "Here is my email " + email + "\n";
+       // message += "and phone no. " + phone + "\n";
+        //message += "Newsletter: " + (newsletter ? "Yes" : "No");
+
+        // Encode the message to be used in the URL
+        const encodedMessage = encodeURIComponent(message);
+
+        // Redirect to WhatsApp Web with the chat window open
+        window.location.href = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
+      }
+
+      // Add an event listener to the "Send message" button
+      const sendMessageBtn = document.querySelector(".whatsapp-chat-btn");
+      sendMessageBtn.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent form submission (if you are using a form)
+
+        // Call the function to open WhatsApp chat
+        openWhatsAppChat();
+      });
+    </script>
+
+    <script>
+      // Get references to the chat-circle, WhatsApp chat, and chatbot elements
+      const chatCircle = document.getElementById('chat-circle');
+      const whatsappChat = document.querySelector('.whatsapp-chat');
+      const chatbot = document.querySelector('.chatbot');
+
+      // Add event listener to the chat-circle
+      chatCircle.addEventListener('click', () => {
+        // Toggle the display property of the WhatsApp chat
+        if (whatsappChat.style.display === 'none') {
+          whatsappChat.style.display = 'block'; // Or use 'flex' if it was a flexbox element
+        } else {
+          whatsappChat.style.display = 'none';
+        }
+      });
+
+      // Get references to the chatbot's close buttons
+      const chatbotCloseButtons = document.querySelectorAll('.icon-close');
+
+      // Add event listener to each close button
+      chatbotCloseButtons.forEach((closeButton) => {
+        closeButton.addEventListener('click', () => {
+          // When the chatbot is closed, show the WhatsApp chat
+          whatsappChat.style.display = 'block'; // Or use 'flex' if it was a flexbox element
+        });
+      });
+    </script>
+
+  </body>
+</html>

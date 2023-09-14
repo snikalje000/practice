@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    /*$tablet: only screen and (min-width:64em);
+$desktop: only screen and (min-width:90em);
+*/
+body {
+    color: #3d3d3d;
+  }
+  
+  h1 {
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+  }
+  
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+  
+  h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  
+  p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+  }
+  
+  a {
+    color: #168dd9;
+  }
+
+
+  @media only screen and (min-width: 64em) {
+    .container {
+      width: 100%;
+    }
+  }
+  
+  .page-header {
+    border-bottom: 1px solid #eceeed;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .content-column {
+    width: 100%;
+  }
+  @media only screen and (min-width: 40em) {
+    .content-column {
+      width: 100%;
+    }
+  }
+  @media only screen and (min-width: 64em) {
+    .content-column {
+      max-width: 100%;
+      float: none;
+    }
+  }
+  
+  .ad-column {
+    width: 300px;
+    float: right;
+  }
+  
+  .list-title {
+    color: #9f9f9f;
+    font-size: 14px;
+    text-transform: uppercase;
+    
+  }
+  
+  .events-list {
+    padding-left: 0px;
+    list-style-type: none;
+  }
+  .events-list .event-item {
+    border-bottom: 1px solid #eceeed;
+    margin-bottom: 1em;
+  }
+  
+  .day-column {
+    max-width: 20%;
+    padding-top: 0.15em;
+    padding-right: 2em;
+    float: left;
+  }
+  
+  .month-name {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  @media only screen and (min-width: 40em) {
+    .month-name {
+      text-align: right;
+    }
+  }
+  
+  .day-name {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 70%;
+  }
+  
+  .title-column {
+    max-width: 80%;
+    float: left;
+  }
+  
+  .title-name {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    word-wrap: break-word;
+    width: 500px;
+  }
+  .dec{
+    word-wrap: break-word;
+    width: 500px;
+  }
+  .event-title,
+  .event-details,
+  .event-category {
+    margin-bottom: 1em;
+  }
+  
+  .event-details-list {
+    padding-bottom: 0em;
+    padding-left: 0em;
+    list-style: none; /* Remove default list-style */
+  }
+  
+  .event-details-list li {
+    padding-left: 20px; /* Add space for the custom bullet point */
+    background: url('../static/images/1224679-200.png') no-repeat left 5px;
+    background-size: 16px 16px; /* Set the width and height of the bullet point */
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  .event-details-list .event-details-item:nth-child(3) {
+    color: #9f9f9f;
+  }
+  
+  .event-category-title {
+    color: #9f9f9f;
+  }
+  
+  .event-category-name {
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media (max-width:767px){
+    .title-name {
+
+      word-wrap: break-word;
+      width: 250px;
+    }
+    .dec{
+      word-wrap: break-word;
+      width: 250px;
+    }
+  }
+  @media (max-width:991px){
+    .title-name {
+
+      word-wrap: break-word;
+      width: 250px;
+    }
+    .dec{
+      word-wrap: break-word;
+      width: 250px;
+    }
+  }
+  
+</style>
+<section class="ftco-section about-section">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- <div class="content-header">
+                    <h1 class="page-header">eShiksha Events</h1>
+                </div> -->
+                <div class="text-center">
+                  <h2>eShiksha <span style="color:goldenrod;">Events</span></h2>
+                </div>
+                
+                {% for event in event %}
+                <!-- {{event.description}} -->
+                    <div class="content-column ss"> 
+                            
+                        <h2 class="list-title">Upcoming Events</h2>
+                        <div class="events-listings">
+                            <ul class="events-list">
+                                <li class="event-item clearfix">
+                                    <div class="day-column">
+                                        <h4 class="month-name">{{event.date}}</h4>
+                                        <p class="day-name">{{event.day}}</p>
+                                    </div>
+                                    <div class="title-column">
+                                        <div class="event-title">
+                                            <h3 class="title-name text-capitalize">{{event.title}}</h3>
+                                        </div>
+                                        <div class="event-details">
+                                            <ul class="event-details-list">
+                                                <li class="event-details-item">
+                                                    <div class="dec text-capitalize">{{event.description}}</div>
+                                                </li>
+                                                <li class="event-details-item">
+                                                    <div class="text-capitalize">Presented By<span style="color: #989797;"> {{event.presented_by}}</span></div>
+                                                </li>
+                                                <li class="event-details-item" style="color:#3d3d3d;">
+                                                    <div>{{event.time_from}} to {{event.time_to}}</div>
+                                                </li>
+                                                <li class="event-details-item">
+                                                    <div class="text-capitalize">{{event.venue}}</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="ad-column"> 
+                                        <img class="ad" src="{{event.image.url}}" width="300"
+                                            height="218" alt="bg">
+                                    </div>
+                                </li>
+                            </ul>
+                          
+                        </div>
+                    </div>
+                {% endfor %}
+                <button class="btn btn-primary" id="showButton">Show More</button>
+    
+                {% for fevent in fevent %}
+                    <div class="content-column ss1 my-auto"> 
+                            
+                        <h2 class="list-title">Features Events</h2>
+                        <div class="events-listings">
+                            <ul class="events-list">
+                                <li class="event-item clearfix">
+                                    <div class="day-column">
+                                        <h4 class="month-name">{{fevent.date}}</h4>
+                                        <p class="day-name">{{fevent.day}}</p>
+                                    </div>
+                                    <div class="title-column">
+                                        <div class="event-title">
+                                            <h3 class="title-name text-capitalize">{{fevent.title}}</h3>
+                                        </div>
+                                        <div class="event-details">
+                                            <ul class="event-details-list">
+                                                <li class="event-details-item">
+                                                    <div  class="dec text-capitalize">{{fevent.description}}</div>
+                                                </li>
+                                                <li class="event-details-item">
+                                                    <div class="text-capitalize">Presented By<span style="color: #989797;"> {{fevent.presented_by}}</span></div>
+                                                </li>
+                                                <li class="event-details-item" style="color:#3d3d3d;">
+                                                    <div>{{fevent.time_from}} to {{fevent.time_to}}</div>
+                                                </li>
+                                                <li class="event-details-item">
+                                                    <div>{{fevent.venue}}</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="ad-column"> 
+                                        <img class="ad1" src="{{fevent.image.url}}" width="300"
+                                            height="218" alt="bg1">
+                                        
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                          </div>
+                        
+                    </div>
+                {% endfor %}
+                <button class="btn btn-primary" id="showButton1">Show More</button>
+                    
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script>
+    const showButton = document.getElementById('showButton');
+    const eventItems = document.querySelectorAll('.ss');
+    const adImages = document.querySelectorAll('.ad');
+    let eventsVisible = false; // Initialize the state of event visibility
+    
+    // Hide all events except the first one
+    for (let i = 1; i < eventItems.length; i++) {
+        eventItems[i].style.display = 'none';
+        adImages[i].style.display = 'none';
+    }
+
+    
+    // Add click event listener to the "Show More" button
+    showButton.addEventListener('click', () => {
+        eventsVisible = !eventsVisible; // Toggle the visibility state
+        
+        for (let i = 1; i < eventItems.length; i++) {
+            eventItems[i].style.display = eventsVisible ? 'block' : 'none';
+            adImages[i].style.display = eventsVisible ? 'block' : 'none';
+        }
+    });
+</script>
+
+<script>
+    const showButton1 = document.getElementById('showButton1');
+    const eventItems1 = document.querySelectorAll('.ss1');
+    const adImages1 = document.querySelectorAll('.ad1');
+    let eventsVisible1 = false; // Initialize the state of event visibility
+    
+    // Hide all events except the first one
+    for (let i = 1; i < eventItems1.length; i++) {
+        eventItems1[i].style.display = 'none';
+        adImages1[i].style.display = 'none';
+    }
+
+    
+    // Add click event listener to the "Show More" button
+    showButton1.addEventListener('click', () => {
+        eventsVisible1 = !eventsVisible1; // Toggle the visibility state
+        
+        for (let i = 1; i < eventItems1.length; i++) {
+            eventItems1[i].style.display = eventsVisible1 ? 'block' : 'none';
+            adImages1[i].style.display = eventsVisible1 ? 'block' : 'none';
+        }
+    });
+</script>
+{% endblock %}

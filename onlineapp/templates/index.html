@@ -1,0 +1,2375 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <div class="hero-wrap he1 js-fullheight" style="background-image: url('../static/images/bgs1.webp');">
+                <div class="container-fluid" style="height:100%;">
+                    <div class="overlay hee1"></div>
+                    <div class="row headrow no-gutters slider-text js-fullheight justify-content-center"
+                        data-scrollax-parent="true">
+                        <div class="col-lg-6 py-5 my-5 mx-5">
+                            <h1 class=" pt-4 d-flex justify-content-start align-items-baseline heading-primary">
+                                <h1>Igniting Talent,</h1>
+                                <h1>sid</h1>
+                                <h1 style="color: goldenrod;">Transforming Careers</h1>
+                            </h1>
+                            <div class="d-flex align-items-center intro" style="padding-top: 150px;">
+                                <p>
+                                    <a href="{% url 'onlineapp:courses' %}" class="btn btn-primary">Our Courses</a> 
+                                    <a href="{% url 'onlineapp:about_us' %}" class="btn btn-white">Learn More</a>
+                                </p>
+                                <button type="button"
+                                    style="border:0px!important;background-color:transparent!important;"
+                                    class="btn btn-primary video-btn d-flex justify-content-center align-items-center"
+                                    data-src="https://www.youtube.com/embed/GznCK78NPQc" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                    <a class="play-btn" href="#!"
+                                        style="top: 0px !important; margin:0px 20px !important;width: 65px !important;
+                                    height: 65px !important;
+                                    background: radial-gradient( goldenrod 46%, rgba(255, 255, 255, 1) 88% ) !important;"></a>
+                                    <p class="text-left" style="font-size:15px">Watch Intro Video</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-8 col-sm col-xs my-auto">
+                            <div class="d-flex mx-5 align-items-center justify-content-end intro">
+
+                                <form style="background: rgba(0,0,0,0.5); backdrop-filter: saturate(180%) blur(10px);"
+                                    id="application-form1">
+                                    <div class="read"
+                                        style="border: none; margin: 3px; padding: 2px; padding-bottom: 1px; box-shadow: inset 0 0 0 .10em goldenrod;">
+                                        <div class="col-lg-11 cs col-md-11 mx-auto">
+                                            <h6 class="px-1 my-3 text-white font-weight-bold" style="font-size: 20px;">
+                                                Ready to transform your career</h6>
+                                        </div>
+
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-md-5 col-lg-5">
+                                                <div class="form-group mb-2">
+                                                    <label for="afname" id="afname-label"
+                                                        class="text-white col-form-label col-form-label-sm">First
+                                                        Name</label>
+                                                    <input type="text" class="form-control" id="afname"
+                                                        placeholder="Enter your Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-lg-5">
+                                                <div class="form-group mb-2">
+                                                    <label for="alname" id="alname-label"
+                                                        class="text-white col-form-label col-form-label-sm">Last
+                                                        Name</label>
+                                                    <input type="text" class="form-control" id="alname"
+                                                        placeholder="Enter your Last Name">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-md-5 col-lg-5">
+                                                <div class="form-group mb-2">
+                                                    <label for="aphone" id="aphone-label"
+                                                        class="text-white col-form-label col-form-label-sm">Mobile
+                                                        Number</label>
+                                                    <input type="phone" class="form-control" id="aphone"
+                                                        placeholder="Enter your Mobile No." pattern="\d{10}">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-5 col-lg-5">
+                                                <div class="form-group mb-2">
+                                                    <label for="aemail" id="aemail-label"
+                                                        class="text-white col-form-label col-form-label-sm">Email</label>
+                                                    <input type="email" class="form-control" id="aemail"
+                                                        placeholder="Enter your Email">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row justify-content-center py-3">
+                                            <div class="col-md-10 col-lg-10">
+                                                <div class="form-group mb-0">
+                                                    <div class="input-wrapper">
+                                                        <select class="form-control" name="eexampleRadios1"
+                                                            style="color: #a9a9a9;" id="acourse">
+                                                            <option value="" selected>--Select Course--</option>
+                                                            <option value="Data Science">Data Science</option>
+                                                            <option value="AI/ML">AI/ML</option>
+                                                            <option value="Cloud Computing">Cloud</option>
+                                                            <option value="Cybersecurity">Cyber Security</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="text-center">
+                                                <button type="button"
+                                                    class="button btn btn-primary text-dark">Download
+                                                    Brochure</button>
+                                                    <!-- card__button -->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="hero-wrap he1 js-fullheight" style="background-image: url('../static/images/bgs1.webp');">
+                <div class="container-fluid" style="height:100%;">
+                    <div class="overlay hee1"></div>
+                    <div class="row headrow no-gutters slider-text js-fullheight justify-content-start"
+                        data-scrollax-parent="true">
+                        <div class="col-lg-6 py-5 my-5 mx-5">
+                            <h1 class=" pt-4 d-flex justify-content-start align-items-baseline heading-primary">
+                                <h1>Learn Master</h1>
+                                <h1 style="color: goldenrod;">Succeed with eShiksha</h1>
+                            </h1>
+                            <div class="d-flex align-items-center intro" style="padding-top: 150px;">
+                                <p><a href="/courses" class="btn btn-primary">Our Courses</a> <a href="/about_us"
+                                        class="btn btn-white">Learn More</a></p>
+                                <button type="button"
+                                    style="border:0px!important;background-color:transparent!important;"
+                                    class="btn btn-primary video-btn d-flex justify-content-center align-items-center"
+                                    data-src="https://www.youtube.com/embed/GznCK78NPQc" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                    <a class="play-btn" href="#!"
+                                        style="top: 0px !important; margin:0px 20px !important;width: 65px !important;
+                                    height: 65px !important;
+                                    background: radial-gradient( goldenrod 46%, rgba(255, 255, 255, 1) 88% ) !important;"></a>
+                                    <p class="text-left" style="font-size:15px">Watch Intro Video</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="hero-wrap he1 js-fullheight" style="background-image: url('../static/images/bgs1.webp');">
+                <div class="container-fluid" style="height:100%;">
+                    <div class="overlay hee1"></div>
+                    <div class="row headrow no-gutters slider-text js-fullheight justify-content-start"
+                        data-scrollax-parent="true">
+                        <div class="col-lg-6 py-5 my-5 mx-5">
+                            <h1 class=" pt-4 d-flex justify-content-start align-items-baseline heading-primary">
+                                <h1>Unlock Your Potential</h1>
+                                <h1 style="color: goldenrod;">with eShiksha</h1>
+                            </h1>
+                            <div class="d-flex align-items-center intro" style="padding-top: 150px;">
+                                <p><a href="/AI-ML" class="btn btn-primary">Our Courses</a> <a href="/about_us"
+                                        class="btn btn-white">Learn More</a></p>
+                                <button type="button"
+                                    style="border:0px!important;background-color:transparent!important;"
+                                    class="btn btn-primary video-btn d-flex justify-content-center align-items-center"
+                                    data-src="https://www.youtube.com/embed/GznCK78NPQc" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                    <a class="play-btn" href="#!"
+                                        style="top: 0px !important; margin:0px 20px !important;width: 65px !important;
+                                    height: 65px !important;
+                                    background: radial-gradient( goldenrod 46%, rgba(255, 255, 255, 1) 88% ) !important;"></a>
+                                    <p class="text-left" style="font-size:15px">Watch Intro Video</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+<!-- intro video -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="" id="video" allow="0; encrypted-media"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="client1 py-4">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8 heading-section text-center ftco-animate ">
+                <h2>Why <span style="color:goldenrod;">eShiksha</span></h2>
+            </div>
+            <div class="slider12">
+                <ul class="slider-list">
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/job ready.png' %}" alt="!00%job">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">100% Job <br> ready program</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/at.png' %}" alt="TopNotchIndustry">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">Top Notch <br> Industry mentors</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/ip.png' %}" alt="Industry-led">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">Industry-led <br> live projects</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/1m.png' %}" alt="focusmentorship">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">1:1 Focused <br> Mentorship</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/accreditation.png' %}" alt="nationalinternational">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">National & International <br> accreditation</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/lucrative financial.png' %}" alt="financhialsupport">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">Lucrative Financial <br> support</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!--   <button class="action-button left-chevron" data-toggle="slider-action" data-direction="prev">
+                &lsaquo;
+                </button>
+                <button class="action-button right-chevron" data-toggle="slider-action" data-direction="next">
+                &rsaquo;
+                </button> -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end intro video -->
+<section class="client bg-white">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8 heading-section text-center ftco-animate ">
+                <h2>We're Partnered With Leading <span style="text-transform: capitalize; color:goldenrod;">Institutions
+                        And Corporations</span></h2>
+            </div>
+            <div class="slider13">
+                <ul class="slider-list">
+                    <li class="slider-item">
+                        <img loading="lazy" height="auto" width="120" alt="presidancy" src="{% static 'images/LOGOpng.png' %}">
+                    </li>
+                    <li class="slider-item">
+                        <img loading="lazy" height="auto" width="120" alt="microsoft" src="{% static 'images/microsoft.png' %}">
+                    </li>
+                    <li class="slider-item">
+                        <img loading="lazy" height="auto" width="120" alt="aws" src="{% static 'images/aws.png' %}">
+                    </li>
+                    <li class="slider-item">
+                        <img loading="lazy" height="auto" width="120" alt="googlecloud" src="{% static 'images/googlecloud.png' %}">
+                    </li>
+                    <li class="slider-item">
+                        <img loading="lazy" height="auto" width="120" alt="oracle" src="{% static 'images/oracle.png' %}">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="timeline_area section_padding_130">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-lg-12">
+                <!-- Section Heading-->
+                <div class="section_heading text-center">
+                    <!-- <h6>Our History</h6> -->
+                    <div class="col-md-8 mx-auto heading-section text-center ftco-animate ">
+                        <h2>Empowering Your <span style="color:goldenrod;">Journey to Success</span></h2>
+                    </div>
+                    <!-- <h3>A brief stories of our 2 years company journey</h3> -->
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <!-- Timeline Area-->
+                <div class="apland-timeline-area">
+                    <!-- Single Timeline Content-->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>Get Started</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-S6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon">
+                                        <!-- <i class="fa fa-address-card" aria-hidden="true"></i> -->
+                                        <img src="{% static 'images/ca.png' %}" width="40" height="auto" alt="Career Guidance">
+                                    </div>
+                                    <div class="timeline-text">
+                                        <h6>Career Guidance</h6>
+                                        <p>Allow our experts to help you explore your skills & plan your career journey.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+                                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon">
+                                        <img src="{% static 'images/en.png' %}" width="40" height="auto" alt="Enrollment">
+                                    </div>
+                                    <div class="timeline-text">
+                                        <h6>Enrollment</h6>
+                                        <p>Join our diverse IT learning community for cutting-edge programs and skills.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s"
+                                    style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon">
+                                        <img src="{% static 'images/itj.png' %}" width="40" height="auto" alt="IT Journey">
+                                    </div>
+                                    <div class="timeline-text">
+                                        <h6>Start Your IT Journey</h6>
+                                        <p>Embark on an exciting IT journey, explore domains, find your niche.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Timeline Content-->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>Modules</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon">
+                                        <img src="{% static 'images/bm.png' %}" width="40" height="auto" alt="Basic modules">
+                                    </div>
+                                    <div class="timeline-text">
+                                        <h6>Basic Modules</h6>
+                                        <p>Build a strong foundation with our comprehensive basics.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+                                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon">
+                                        <img src="{% static 'images/am.png' %}" width="40" height="auto" alt="advanced module">
+                                    </div>
+                                    <div class="timeline-text">
+                                        <h6>Advanced Modules</h6>
+                                        <p>Boost skills with advanced modules, preparing for real-world challenges.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s"
+                                    style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon">
+                                        <img src="{% static 'images/lp.png' %}" width="40" height="auto" alt="Live Project">
+                                    </div>
+                                    <div class="timeline-text">
+                                        <h6>Live Projects</h6>
+                                        <p>Get real-world experience, collaborate with industry pros.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Timeline Content-->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <p>Placement</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon">
+                                        <img src="{% static 'images/im.png' %}" width="40" height="auto" alt="Interview Mock">
+                                    </div>
+                                    <div class="timeline-text">
+                                        <h6>Interview Mock</h6>
+                                        <p>Boost confidence, ace interviews with mock feedback.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+                                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon">
+                                        <img src="{% static 'images/bjr.png' %}" width="40" height="auto" alt="Become Job ready">
+                                    </div>
+                                    <div class="timeline-text">
+                                        <h6>Become Job Ready</h6>
+                                        <p>Get job-ready with diverse skillset & personalized career guidance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s"
+                                    style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                                    <div class="timeline-icon">
+                                        <img src="{% static 'images/pd.png' %}" width="40" height="auto" alt="Placement Drive">
+                                    </div>
+                                    <div class="timeline-text">
+                                        <h6>Placement Drive</h6>
+                                        <p>Utilize connections, secure job opportunities, launch your IT career.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section services-section py-5">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+
+            <div class="col-md-4 heading-section text-center ftco-animate ">
+                <h2>Start Learning Today <span style="text-transform: capitalize; color:goldenrod;">Browse Course
+                        Category</span></h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="img-gallery-container">
+                <figure class="img-gallery">
+                    <a href="{% url 'onlineapp:courses' %}">
+                        <img src="{% static 'images/ais1.webp' %}"  alt="ai" style="width: 100%; height:auto;">
+                        <figcaption class="desc">
+                            <p class="text-dark"><a href="{% url 'onlineapp:courses' %}">Artificial Intelligence</a></p>
+                        </figcaption>
+                    </a>
+                </figure>
+                <figure class="img-gallery">
+                    <a href="{% url 'onlineapp:coursedataanalytics' %}">
+                        <img src="{% static 'images/data1.webp' %}"  style="width: 100%; height:auto;" alt="Data Science">
+                        <figcaption class="desc">
+                            <p class="text-dark"><a href="{% url 'onlineapp:coursedataanalytics' %}">Data Science</a></p>
+                        </figcaption>
+                    </a>
+                </figure>
+
+                <figure class="img-gallery">
+                    <a href="{% url 'onlineapp:coursecloudcomputing' %}">
+
+                        <img src="{% static 'images/clo1.webp' %}"  alt="cloud" style="width: 100%; height:auto;">
+                        <figcaption class="desc">
+                            <p class="text-dark"><a href="{% url 'onlineapp:coursecloudcomputing' %}">Cloud</a></p>
+                        </figcaption>
+                    </a>
+                </figure>
+                <figure class="img-gallery">
+                    <a href="{% url 'onlineapp:coursecybersecurity' %}">
+
+                        <img src="{% static 'images/cyber1.webp' %}"  alt="Cyber Security"
+                            style="width: 100%; height:auto;">
+                        <figcaption class="desc">
+                            <p class="text-dark"><a href="{% url 'onlineapp:coursecybersecurity' %}">Cyber Security</a></p>
+                        </figcaption>
+                    </a>
+                </figure>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light">
+    <div class="container py-0 pt-5 pb-0" id="myWizard">
+        <div class="tab-content py-1">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h2 class="mb-2">More <span style="color: goldenrod;">Details</span></h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <ul class="nav nav-pills">
+                            <div class="col-lg-3 col-md-6">
+                                <li class="active1 py-2 px-2 mx-2 text-center bg-light border" style="
+box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);"><a class="text-dark " href="#step1"
+                                        data-toggle="tab">Data Science</a></li>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <li class="py-2 px-5 mx-2 text-center bg-light border" style="
+box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);"><a class="text-dark " href="#step2"
+                                        data-toggle="tab">AI/ML</a></li>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <li class="py-2 px-5 mx-2 text-center bg-light border" style="
+box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);"><a href="#step3" data-toggle="tab"
+                                        class="text-dark">Cloud</a></li>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <li class="py-2 px-2 mx-2 text-center bg-light border" style="
+box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(229,228,228,0.75);"><a href="#step4" data-toggle="tab"
+                                        class="text-dark">Cyber Security</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane active" id="step1">
+                <div class="container py-2">
+                    <!-- role data science -->
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <h4>Key Roles In <span style="color: goldenrod;">Data Science</span></h4>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Data Scientist</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Al & ML Engineer</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Data Science Consultant</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Data Analyst</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Business Analyst</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Data Architect</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center py-2">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <h4>Skills <span style="color: goldenrod;">Covered</span></h4>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Python</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Statistics</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Data Analysis</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">AI</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Machine Learning</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Data Exploring</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <h2>Tools Covered</h2> -->
+                    <div class="row justify-content-between py-1">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <!-- <span class="subheading">Start Learning Today</span> -->
+                            <h4>Tools <span style="color: goldenrod;">Covered</span></h4>
+                        </div>
+
+                        <div class="col-auto">
+                            <img width="120" height="auto" class="imgs1"
+                                src="{% static 'images/MicrosoftTeams-image__7_-removebg-preview.png' %}" alt="Slide 3">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" class="imgs1" src="{% static 'images/jupiter-removebg-preview.png' %}"
+                                alt="Slide 3">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" class="imgs1" src="{% static 'images/numpy-removebg-preview.png' %}"
+                                alt="Slide 3">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" class="imgs1" src="{% static 'images/pandas.png' %}" alt="Slide 3">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" class="imgs1" src="{% static 'images/scipy.png' %}" alt="Slide 3">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" class="imgs1" src="{% static 'images/mat-removebg-preview.png' %}"
+                                alt="Slide 3">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" class="imgs1" src="{% static 'images/pyspark-removebg-preview.png' %}"
+                                alt="Slide 3">
+                        </div>
+                        <!-- Add more images as needed -->
+                    </div>
+                    <!-- </div> -->
+
+                    <!-- data scirence Curriculam -->
+                    <div class="container py-5">
+                        <!-- <h2 style="margin-left: 5%;text-align:center">Learn with a <span style="color:goldenrod">World
+                                Class Curriculum</span></h2> -->
+                        <div class="row py-3 justify-content-center">
+                            <div class="col-md-12 d-flex heading-section text-center ftco-animate">
+                                <h2 class="mb-4">Learn with a <span style="color: goldenrod;"> World Class Data
+                                        Science Curriculum</span></h2>
+                            </div>
+                            <!-- FAQ Area-->
+                            <div class="col-12 col-sm-10 col-lg-12">
+                                <div class="cp_wrapper">
+
+                                    <!-- Accordion -->
+                                    <div class="accordion">
+
+                                        <!-- Item -->
+                                        <div class="accordion-tab" aria-selected="false">
+                                            <!-- Head -->
+                                            <div class="accordion-head">
+                                                <div class="accordion--text">Python for Data Science</div>
+                                                <div class="accordion--icon">
+                                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                                            fill="#000000" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div class="accordion-content">
+                                                <div class="content flow">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <span style="font-weight: 700;">Python Programming for data
+                                                                science</span>
+                                                            <ul>
+                                                                <li>Intro to Programming</li>
+                                                                <li>python Programming</li>
+                                                                <li>Installation of anaconda Ide</li>
+                                                                <li>Launching Jupyter Notebook</li>
+                                                                <li>Shortcuts in Jupyter Notebook</li>
+                                                                <li>Intro to python classes and objects</li>
+                                                                <li>Loops (If, If-else, While, Nested,for), User input
+                                                                </li>
+                                                            </ul>
+
+                                                            <div class="row">
+                                                                <div class="col-lg-5">
+                                                                    <ul class="left">
+                                                                        <li>Syntax</li>
+                                                                        <li>variables</li>
+                                                                        <li>datatypes</li>
+                                                                        <li>Numbers</li>
+                                                                        <li>Operations</li>
+                                                                        <li>Strings</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-lg-5">
+                                                                    <ul class="right">
+                                                                        <li>Lists</li>
+                                                                        <li>Tuples</li>
+                                                                        <li>Lambda</li>
+                                                                        <li>Map</li>
+                                                                        <li>Filter</li>
+                                                                        <li>reduce</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <span style="font-weight: 700;">Data Manipulations and
+                                                                visualization Libraries</span>
+                                                            <ul>
+                                                                <li>Pandas - I</li>
+                                                                <li>Numpy</li>
+                                                                <li>Visualization using Matplot </li>
+                                                                <li>Visualization using seaborn </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item -->
+                                        <div class="accordion-tab" aria-selected="false">
+                                            <!-- Head -->
+                                            <div class="accordion-head">
+                                                <div class="accordion--text">Statistics</div>
+                                                <div class="accordion--icon">
+                                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                                            fill="#000000" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div class="accordion-content">
+                                                <div class="content flow">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <span style="font-weight: 700;">Probability and
+                                                                statistics</span>
+                                                            <ul>
+                                                                <li>Intro to Conditional probability</li>
+                                                                <li>Intro to Statistics, Descriptive Statistics (Central
+                                                                    tendency theorem, Variance & Std Dev)</li>
+                                                                <li>Inferential Statistics - I(Intro to Inferential
+                                                                    Stats, Intro to correlation, Pearson's Correlation,
+                                                                    Data Distribution)Inferential statistics - II
+                                                                    (Covariance and correlation, Z-scores, Hypothesis
+                                                                    testing, P-Value, Random Variables) </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item -->
+                                        <div class="accordion-tab" aria-selected="false">
+                                            <!-- Head -->
+                                            <div class="accordion-head">
+                                                <div class="accordion--text">Data Pre-Processing</div>
+                                                <div class="accordion--icon">
+                                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                                            fill="#000000" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div class="accordion-content">
+                                                <div class="content flow">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <span style="font-weight: 700;">Data Processing (Basic -
+                                                                Advanced)</span>
+                                                            <ul>
+                                                                <li>Data Pre-Processing - I</li>
+                                                                <li>Advanced-Data Preprocessing - II(Handling linear and
+                                                                    non-linear data, Handling imbalance data, numeric
+                                                                    and categorical data, Scaling, Normalizing, and
+                                                                    standardizing the data )</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item -->
+                                        <div class="accordion-tab" aria-selected="false">
+                                            <!-- Head -->
+                                            <div class="accordion-head">
+                                                <div class="accordion--text">Linear Ml Modelling</div>
+                                                <div class="accordion--icon">
+                                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                                            fill="#000000" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div class="accordion-content">
+                                                <div class="content flow">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <span style="font-weight: 700;">Linear regression</span>
+                                                            <ul>
+                                                                <li>Intro to Linear regression</li>
+                                                                <li>Simple Linear Regression, Multiple Linear Regression
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <span style="font-weight: 700;">Time Series Analysis</span>
+                                                            <ul>
+                                                                <li>Introduction to time series, Time series ML
+                                                                    modelling (ARMA)</li>
+                                                                <li>Time series ML modelling (SARIMA & SARIMAX)</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item -->
+                                        <div class="accordion-tab" aria-selected="false">
+                                            <!-- Head -->
+                                            <div class="accordion-head">
+                                                <div class="accordion--text">Classification and techniques</div>
+                                                <div class="accordion--icon">
+                                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                                            fill="#000000" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div class="accordion-content">
+                                                <div class="content flow">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <span style="font-weight: 700;">Advanced Ml Algorithms
+                                                                (Classifiers and regressors)</span>
+                                                            <ul>
+                                                                <li>Introduction to Classification Modelling and Need of
+                                                                    Classification Algorithms</li>
+                                                                <li>Logistic Regression</li>
+                                                                <li>Decision trees and random forest</li>
+                                                                <li>SVM, Neive Bayes</li>
+                                                                <li>Hyperparameter tuning</li>
+                                                                <li>Ensemble Techniques (Bagging, Boosting, Voting)</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item -->
+                                        <div class="accordion-tab" aria-selected="false">
+                                            <!-- Head -->
+                                            <div class="accordion-head">
+                                                <div class="accordion--text">Natural Language Processing with
+                                                    classification</div>
+                                                <div class="accordion--icon">
+                                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                                            fill="#000000" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div class="accordion-content">
+                                                <div class="content flow">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <span style="font-weight: 700;">Sentimental Analysis</span>
+                                                            <ul>
+                                                                <li>Intro to text Processing</li>
+                                                                <li>Text advanced Processing(Regex, lemmatization,
+                                                                    Tokanisation, stopwords, corpus, Wordcloud)</li>
+                                                                <li>Realtime classification model with text data</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item -->
+                                        <div class="accordion-tab" aria-selected="false">
+                                            <!-- Head -->
+                                            <div class="accordion-head">
+                                                <div class="accordion--text">Deep Learning</div>
+                                                <div class="accordion--icon">
+                                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                                            fill="#000000" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div class="accordion-content">
+                                                <div class="content flow">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <span style="font-weight: 700;">Deep Learning</span>
+                                                            <ul>
+                                                                <li>Introduction to Neural Networks, introduction to OCR
+                                                                </li>
+                                                                <li>Practical implementation of ANN & RNN</li>
+                                                                <li>Model building using CNN, OCR Implementation using
+                                                                    EasyOCR</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item -->
+                                        <div class="accordion-tab" aria-selected="false">
+                                            <!-- Head -->
+                                            <div class="accordion-head">
+                                                <div class="accordion--text">SQL Bootcamp</div>
+                                                <div class="accordion--icon">
+                                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                                            fill="#000000" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div class="accordion-content">
+                                                <div class="content flow">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <span style="font-weight: 700;">Database Management</span>
+                                                            <ul>
+                                                                <li>Introduction to data base management and writing
+                                                                    queries to extract the data from the data base</li>
+                                                                <li>Aggregation in SQL, Where clause, rank, </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item -->
+                                        <div class="accordion-tab" aria-selected="false">
+                                            <!-- Head -->
+                                            <div class="accordion-head">
+                                                <div class="accordion--text">Business Frameworks</div>
+                                                <div class="accordion--icon">
+                                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                                            fill="#000000" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div class="accordion-content">
+                                                <div class="content flow">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <span style="font-weight: 700;">MECE, Fishbone</span>
+                                                            <ul>
+                                                                <li>Need for frameworks</li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Item -->
+                                        <div class="accordion-tab" aria-selected="false">
+                                            <!-- Head -->
+                                            <div class="accordion-head">
+                                                <div class="accordion--text">BI Tools</div>
+                                                <div class="accordion--icon">
+                                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                                            fill="#000000" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div class="accordion-content">
+                                                <div class="content flow">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <span style="font-weight: 700;">Power BI/Tableau</span>
+                                                            <ul>
+                                                                <li>Introduction to power BI and setting it up</li>
+                                                                <li>Basic dashboard preperations</li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- data science traning project -->
+                    <section class="ftco-section testimony-section py-0 pb-5">
+                        <div class="container-fluid">
+                            <!-- <h3 style="text-align:center;">Data Science <span style="color:goldenrod">Training Projects</span></h3><br> -->
+                            <div class="col-md-12 heading-section text-center ftco-animate">
+                                <!-- <span class="subheading">Start Learning Today</span> -->
+                                <h2 class="mb-4">Data Science <span style="color:goldenrod">Training Projects</span>
+                                </h2>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="chip">
+                                    <div class="imgsa">
+                                        <img src="{% static 'images/credit_risk-removebg-preview.png' %}" alt="Person"
+                                            style="height: auto; width:90px;">
+                                    </div>
+                                    <p class="text-dark" style="font-size:16px;">
+                                        Credit Risk Analysis
+                                    </p>
+                                </div>
+                                <div class="chip">
+                                    <div class="imgsa">
+                                        <img src="{% static 'images/sentiment_analysis-removebg-preview.png' %}" alt="Person"
+                                            style="height: auto; width:90px;">
+                                    </div>
+                                    <p class="text-dark" style="font-size:16px;">
+                                        Sentiment Analysis
+                                    </p>
+                                </div>
+                                <div class="chip border-0">
+                                    <div class="imgsa">
+                                        <img src="{% static 'images/price_prediction-removebg-preview.png' %}" alt="Person"
+                                            style="height: auto; width:90px;">
+                                    </div>
+                                    <p class="text-dark" style="font-size:16px;">
+                                        Price Prediction
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+            <div class="tab-pane" id="step2">
+                <div class="container py-2">
+                    <!-- role data science -->
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <h4>Key Roles In <span style="color: goldenrod;">AI/ML</span></h4>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Machine Learning Engineer</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">AI Engineer</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Data Modelling Engineer</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Data Scientist</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Data Analyst</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">AI/ML Architect</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- data science skills -->
+                    <!-- <div class="container py-2"> -->
+                    <!-- <h2>Skills Covered</h2> -->
+                    <div class="row justify-content-center py-2">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <!-- <span class="subheading">Start Learning Today</span> -->
+                            <h4>Skills <span style="color: goldenrod;">Covered</span></h4>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">AI ML Basics</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Statistics</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Linear Algebra & Probability</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Machine Learning</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Python Programming</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Optimization Methods</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <h2>Tools Covered</h2> -->
+                    <div class="row justify-content-between py-1">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <!-- <span class="subheading">Start Learning Today</span> -->
+                            <h4>Tools <span style="color: goldenrod;">Covered</span></h4>
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto"
+                                src="{% static 'images/MicrosoftTeams-image__7_-removebg-preview.png' %}" alt="Slide 1">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/jupiter-removebg-preview.png' %}"
+                                alt="Slide 1">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/pandas.png' %}" alt="Slide 1">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/numpy-removebg-preview.png' %}"
+                                alt="Slide 1">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/scipy.png' %}" alt="Slide 1">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/excel.png' %}" alt="Slide 1">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/keras.png' %}" alt="Slide 1">
+                        </div>
+
+                        <!-- Add more images as needed -->
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <!-- tab3 -->
+            <div class="tab-pane" id="step3">
+                <div class="container py-2">
+                    <!-- role data science -->
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <h4>Key Roles In <span style="color:  goldenrod;">Cloud</span></h4>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Solutions Architect</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Cloud Developer</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Cloud Network Engineer</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Cloud System Engineer</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Systems Operations Engineer</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Cloud Consultant</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- data science skills -->
+                    <!-- <div class="container py-2"> -->
+                    <!-- <h2>Skills Covered</h2> -->
+                    <div class="row justify-content-center py-2">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <!-- <span class="subheading">Start Learning Today</span> -->
+                            <h4>Skills <span style="color: goldenrod;">Covered</span></h4>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Cloud
+                                    Provider Selection</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Application Migration</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Performance Testing</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Cloud
+                                    Workloads</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Identity Access Management</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Autoscaling</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <h2>Tools Covered</h2> -->
+                    <div class="row justify-content-between py-1">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <!-- <span class="subheading">Start Learning Today</span> -->
+                            <h4>Tools <span style="color: goldenrod;">Covered</span></h4>
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/mic2.png' %}" alt="Slide 2">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/az.png' %}" alt="Slide 2">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/aw.png' %}" alt="Slide 2">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/ms.png' %}" alt="Slide 2">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/ac.png' %}" alt="Slide 2">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/oracle.png' %}" alt="Slide 2">
+                        </div>
+                        <!-- Add more images as needed -->
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <!-- tab4 -->
+            <div class="tab-pane" id="step4">
+                <div class="container py-2">
+                    <!-- role data science -->
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <h4>Key Roles In <span style="color:  goldenrod;">Cyber Security</span></h4>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Security Analyst</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Systems Admin</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Network Security Engineer</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Firewall expert</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Information Security Associate</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Penetration Tester</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- data science skills -->
+                    <!-- <div class="container py-2"> -->
+                    <!-- <h2>Skills Covered</h2> -->
+                    <div class="row justify-content-center py-2">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <!-- <span class="subheading">Start Learning Today</span> -->
+                            <h4>Skills <span style="color: goldenrod;">Covered</span></h4>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Android Hacking</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Password Cracking</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Cryptography</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Computer Forensics</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Network Security</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ftco-animate">
+                            <div class="DAcard">
+                                <h6 class="text-dark">Penetration Testing</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <h2>Tools Covered</h2> -->
+                    <div class="row justify-content-between py-1">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <!-- <span class="subheading">Start Learning Today</span> -->
+                            <h4>Tools <span style="color: goldenrod;">Covered</span></h4>
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/linux.png' %}" alt="Slide 4">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/burpsuite.png' %}" alt="Slide 4">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/wireshark.png' %}" alt="Slide 4">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/metasploit.png' %}" alt="Slide 4">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/kali linux.png' %}" alt="Slide 4">
+                        </div>
+                        <div class="col-auto">
+                            <img width="120" height="auto" src="{% static 'images/nessus.png' %}" alt="Slide 4">
+                        </div>
+                        <!-- Add more images as needed -->
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section testimony-section bg-white py-5">
+    <div class="overlay" style="background-image: url(../static/images/studentclass.webp) !important;"></div>
+    <div class="container">
+        <div class="row pb-3">
+            <div class="col-md-7 heading-section">
+                <span class="subheading">Testimonials</span>
+                <h2 class="mb-3">What our Students Say</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container container-2">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="customers-testimonials" class="owl-carousel">
+
+                    <!--TESTIMONIAL 1 -->
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <img class="img-circle" loading="lazy" src="{% static 'images/Aniket Gaikwad_CTPL.jpeg' %}"
+                                alt="test1">
+                            <p>eShiksha transformed my professional growth. With diverse courses, expert instructors,
+                                and real-time projects, I gained valuable skills and independent client handling.</p>
+                        </div>
+                        <div class="testimonial-name">Aniket Gaikwad</div>
+                    </div>
+                    <!--END OF TESTIMONIAL 1 -->
+                    <!--TESTIMONIAL 2 -->
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <img class="img-circle" loading="lazy" src="{% static 'images/nim.png' %}" alt="test1">
+                            <p>I'm thrilled with eShiksha! The wide range of engaging courses helped me
+                                grasp complex concepts effortlessly. The progress tracking and assessment tools
+                                provided valuable insights for improvement.</p>
+                        </div>
+                        <div class="testimonial-name">Nimesh Kudkyal</div>
+                    </div>
+                    <!--END OF TESTIMONIAL 2 -->
+                    <!--TESTIMONIAL 3 -->
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <img class="img-circle" loading="lazy" src="{% static 'images/sajad.png' %}" alt="test1">
+                            <p>I have enrolled with eShiksha for the past six months, and it has
+                                completely transformed my learning experience. The platform offers a wide range of
+                                courses with excellent content and interactive lessons. </p>
+                        </div>
+                        <div class="testimonial-name">Sajad Mir</div>
+                    </div>
+                    <!--END OF TESTIMONIAL 3 -->
+                    <!--TESTIMONIAL 4 -->
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <img class="img-circle" loading="lazy" src="{% static 'images/Prachi Patil_CTPL.jpeg' %}" alt="test1">
+                            <p>eShiksha has been a game-changer for me. The availability of diverse
+                                courses allowed me to explore new areas of interest and expand my skill set.
+                                eShiksha elevated my confidence and professional growth.</p>
+                        </div>
+                        <div class="testimonial-name">Prachi Patil</div>
+                    </div>
+                    <!--END OF TESTIMONIAL 4 -->
+                    <!--TESTIMONIAL 5 -->
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <img class="img-circle" loading="lazy" src="{% static 'images/Mayur Banale_CTPL.png' %}" alt="test1">
+                            <p>eShiksha's traditional learning approach had a profound impact on my
+                                life. The hands-on practical training and real-world projects empowered me to apply
+                                my knowledge effectively, and secure a job.</p>
+                        </div>
+                        <div class="testimonial-name">Mayur Banale</div>
+                    </div>
+                    <!--END OF TESTIMONIAL 5 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="gallery" class="py-5">
+
+    <div class="container py-3">
+        <div class="row py-5">
+            <div id="image-gallery">
+                <div class="row">
+                    <div class="col-md-12 heading-section">
+                        <h2>eShiksha <span style="text-transform: capitalize; color:goldenrod;">- ImageVault </span>
+                        </h2>
+                    </div>
+                    <div class="col-lg-3 col-md-6 imgs1 col-sm-6 col-xs-12 image">
+                        <div class="img-wrapper">
+                            <a href="../static/images/eshiksha1.webp"><img src="{% static 'images/eshiksha1.webp' %}"
+                                    loading="lazy" alt="eshikshavault" class="img-responsive"></a>
+                            <div class="img-overlay imgs1">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 imgs1 col-sm-6 col-xs-12 image">
+                        <div class="img-wrapper">
+                            <a href="../static/images/dc.webp"><img src="{% static 'images/dc.webp' %}"
+                                    loading="lazy" alt="eshikshavault" class="img-responsive"></a>
+                            <div class="img-overlay imgs1">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 imgs1 col-sm-6 col-xs-12 image">
+                        <div class="img-wrapper">
+                            <a href="../static/images/dc1.webp"><img src="{% static 'images/dc1.webp' %}"
+                                    loading="lazy" alt="eshikshavault" class="img-responsive"></a>
+                            <div class="img-overlay imgs1">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 imgs1 col-sm-6 col-xs-12 image">
+                        <div class="img-wrapper">
+                            <a href="../static/images/eshiksha4.webp"><img src="{% static 'images/eshiksha4.webp' %}"
+                                    loading="lazy" alt="eshikshavault" class="img-responsive"></a>
+                            <div class="img-overlay imgs1">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 imgs1 col-sm-6 col-xs-12 image">
+                        <div class="img-wrapper">
+                            <a href="../static/images/eshiksha5.webp"><img src="{% static 'images/eshiksha5.webp' %}"
+                                    loading="lazy" alt="eshikshavault" class="img-responsive"></a>
+                            <div class="img-overlay imgs1">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 imgs1 col-sm-6 col-xs-12 image">
+                        <div class="img-wrapper">
+                            <a href="../static/images/eshiksha6.webp"><img src="{% static 'images/eshiksha6.webp' %}"
+                                    loading="lazy" alt="eshikshavault" class="img-responsive"></a>
+                            <div class="img-overlay imgs1">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 imgs1 col-sm-6 col-xs-12 image">
+                        <div class="img-wrapper">
+                            <a href="../static/images/eshiksha7.webp"><img src="{% static 'images/eshiksha7.webp' %}"
+                                    loading="lazy" alt="eshikshavault" class="img-responsive"></a>
+                            <div class="img-overlay imgs1">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 imgs1 col-sm-6 col-xs-12 image">
+                        <div class="img-wrapper">
+                            <a href="../static/images/eshiksha8.webp"><img src="{% static 'images/eshiksha8.webp' %}"
+                                    loading="lazy" alt="eshikshavault" class="img-responsive"></a>
+                            <div class="img-overlay imgs1">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section bg-light py-5" style="padding-bottom: 0px !important;">
+    <div class="container  py-3 pb-0">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center">
+                <span class="subheading">Our Blog</span>
+                <h2 class="mb-2">Recent Post</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-lg-4">
+                <div class="blog-entry" style="box-shadow: 10px 10px 5px 0px rgba(195,189,189,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(195,189,189,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(195,189,189,0.75);
+">
+                    <a href="{% url 'onlineapp:blogsingle'%}" class="block-20"
+                        style="background-image: url('../static/images/12.webp');">
+                    </a>
+                    <div class="text d-block">
+                        <div class="meta">
+                            <p>
+                                <span class="fa fa-calendar mr-2"></span>June. 29, 2023
+                            </p>
+                        </div>
+                        <h3 class="heading mb-2">The Future of Education</h3>
+                        <p> Trends and Innovations to Watch</p>
+                    
+                        <p><a href="{% url 'onlineapp:blogsingle' %}" class="btn btn-secondary py-2 px-3">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog-entry" style="    box-shadow: 10px 10px 5px 0px rgba(195,189,189,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(195,189,189,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(195,189,189,0.75);
+">
+                    <a href="{% url 'onlineapp:blogsingle1' %}" class="block-20"
+                        style="background-image: url('../static/images/13.webp');">
+                    </a>
+                    <div class="text d-block">
+                        <div class="meta">
+                            <p>
+                                <span class="fa fa-calendar mr-2"></span>June. 29, 2023
+                            
+                            </p>
+                        </div>
+                        <h3 class="heading mb-2">Building a Growth Mindset</h3>
+                        <p>Key to Development</p>
+                    
+                        <p><a href="{% url 'onlineapp:blogsingle1' %}" class="btn btn-secondary py-2 px-3">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog-entry" style="    box-shadow: 10px 10px 5px 0px rgba(195,189,189,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(195,189,189,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(195,189,189,0.75)
+">
+                    <a href="{% url 'onlineapp:blogsingle2' %}" class="block-20"
+                        style="background-image: url('../static/images/blog3.webp');">
+                    </a>
+                    <div class="text d-block">
+                        <div class="meta">
+                            <p>
+                                <span class="fa fa-calendar mr-2"></span>June. 29, 2023
+                            </p>
+                        </div>
+                        <h3 class="heading mb-2">Work-Education Balance</h3>
+                        <p>Tips for Working Professionals</p>
+                    
+                        <p><a href="{% url 'onlineapp:blogsingle2' %}" class="btn btn-secondary py-2 px-3">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="faq_area section_padding_130 pt-5 pb-5" style="background: transparent;" id="faq">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-lg-6">
+                <!-- Section Heading-->
+                <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s"
+                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <!-- <h3><span>Frequently </span> Asked Questions</h3> -->
+                    <div class="col-md-12 heading-section text-center ftco-animate">
+                        <h2 class="mb-0">Frequently <span style="color: goldenrod;">Asked Questions</span></h2>
+                    </div>
+                    <!-- <p>We have put together here some frequently asked questions about eShiksha.</p> -->
+                    <p class="text-dark">If you do not find what you are looking for, do write us an email at <a
+                            href="mailto:learn@eshiksha.ai">learn@eshiksha.ai</a>, and we will get back to you as soon
+                        as we can.</p>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- FAQ Area-->
+            <div class="col-12 col-sm-10 col-lg-8">
+                <div class="cp_wrapper border">
+
+                    <!-- Accordion -->
+                    <div class="accordion">
+
+                        <!-- Item -->
+                        <div class="accordion-tab" aria-selected="false">
+                            <!-- Head -->
+                            <div class="accordion-head">
+                                <div class="accordion--text">Do you offer a free trial?</div>
+                                <div class="accordion--icon">
+                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                            fill="#000000" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="accordion-content">
+                                <div class="content flow">
+                                    <p>Yes, we offer free orientation every Saturday & Sunday</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="accordion-tab" aria-selected="false">
+                            <!-- Head -->
+                            <div class="accordion-head">
+                                <div class="accordion--text">Are the courses on eShiksha self-paced
+                                    or instructor-led?</div>
+                                <div class="accordion--icon">
+                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                            fill="#000000" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="accordion-content">
+                                <div class="content flow">
+                                    <p>We provide instructor-led courses where you can interact with
+                                        expert educators and participate in live sessions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="accordion-tab" aria-selected="false">
+                            <!-- Head -->
+                            <div class="accordion-head">
+                                <div class="accordion--text">Will I receive a certificate after
+                                    completing each level of the program?</div>
+                                <div class="accordion--icon">
+                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                            fill="#000000" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="accordion-content">
+                                <div class="content flow">
+                                    <p>Yes, upon successful completion of each level of the program,
+                                        you will receive a certificate of completion. This certificate validates your
+                                        accomplishment and can be a valuable addition to your professional portfolio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="accordion-tab" aria-selected="false">
+                            <!-- Head -->
+                            <div class="accordion-head">
+                                <div class="accordion--text">Are there any assessments or exams
+                                    during the program? </div>
+                                <div class="accordion--icon">
+                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                            fill="#000000" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="accordion-content">
+                                <div class="content flow">
+                                    <p>Yes, assessments and exams are typically included in the
+                                        programs to evaluate your understanding and progress. These assessments may vary
+                                        from quizzes and assignments to practical projects and exams, depending on the
+                                        program and level.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="accordion-tab" aria-selected="false">
+                            <!-- Head -->
+                            <div class="accordion-head">
+                                <div class="accordion--text">Who are the instructors at eshiksha?
+                                </div>
+                                <div class="accordion--icon">
+                                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.05473 5.78032C5.74791 6.07323 5.24964 6.07323 4.94282 5.78032L0.230113 1.28119C-0.0767041 0.988283 -0.076704 0.512595 0.230113 0.219683C0.53693 -0.0732283 1.0352 -0.0732283 1.34202 0.219683L5.5 4.18922L9.65798 0.222027C9.9648 -0.0708847 10.4631 -0.0708847 10.7699 0.222027C11.0767 0.514938 11.0767 0.990627 10.7699 1.28354L6.05718 5.78266L6.05473 5.78032Z"
+                                            fill="#000000" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="accordion-content">
+                                <div class="content flow">
+                                    <p>eShiksha partners with experienced instructors who are experts
+                                        in their respective fields. Our instructors undergo a rigorous selection process
+                                        to
+                                        ensure high-quality teaching and learning experiences for our students.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HTML code remains the same -->
+<section class="ftco-intro ftco-section ftco-no-pb py-0">
+    <div class="container-fluid p-0 overflow-hidden">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <div class="img" style="background-image: url(../static/images/bg_4.webp);">
+                    <div class="overlay"></div>
+                    <div class="col-md-6 mx-auto mb-3">
+                        <div class="form-group">
+                            <h2 class="mb-3 text-center text-capitalize text-white"
+                                style="letter-spacing: 1px; font-weight:bold; font-size:30px">Subscribe to our
+                                newsletter and <br> our social channels</h2>
+                            <!-- <h2 class="text-capitalize mb-4">Subscribe to our newsletter and our social channels
+                            </h2> -->
+                            <form action="maildata/" method="POST" id="emailtrigger" name="emailtrigger"
+                                class="emailtrigger">
+                                {% csrf_token %}
+                                <div class="d-flex">
+                                    <div class="col-lg-6 col-md-6">
+                                        <input type="text" class="form-control mb-3" name="sname" required
+                                            placeholder="Your Name">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <input type="email" class="form-control mb-3" name="email" required
+                                            placeholder="Email">
+                                    </div>
+                                </div>
+
+                                <p class="mb-0"><button class="btn btn-primary px-4 py-3"
+                                        style="padding-top: 10px !important; padding-bottom:10px !important;"
+                                        type="submit" data-toggle="modal" data-target="#subcribe1">Subscribe
+                                        Now</button></p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <script>
+    function openPDF() {
+        window.open('../static/images/de.pdf', '_blank');
+    }
+</script> -->
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script> 
+    jQuery(document).ready(function ($) {
+    "use strict";
+    //  TESTIMONIALS CAROUSEL HOOK
+    $('#customers-testimonials').owlCarousel({
+        loop: true,
+        center: true,
+        items: 4,
+        margin: 0,
+        autoplay: false,
+        dots: true,
+        autoplayTimeout: 8500,
+        smartSpeed: 450,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1170: {
+                items: 3
+            },
+            1970: {
+                items: 4
+            }
+        }
+    });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: false,
+    speed: 1000,
+    // Navigation arrows
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+
+});
+</script>
+<script>
+    $('.next').click(function () {
+
+        var nextId = $(this).parents('.tab-pane').next().attr("id");
+        $('[href=#' + nextId + ']').tab('show');
+
+    })
+
+    $('.first').click(function () {
+
+        $('#myWizard a:first').tab('show')
+
+    })
+</script>
+<script>
+    $(document).ready(function () {
+        // Add click event handlers to the tab links
+        $('.nav-pills a').on('click', function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            
+            // Remove the 'active1' class from all tab buttons
+            $('.nav-pills li').removeClass('active1');
+            // Add the 'active1' class to the clicked button
+            $(this).parent().addClass('active1');
+
+            // Show the corresponding tab content
+            var targetTab = $(this).attr('href');
+            $('.tab-content .tab-pane').removeClass('show active');
+            $(targetTab).addClass('show active');
+        });
+    });
+</script>
+
+<script>
+    function openPDF() {
+        // Perform actions to open the PDF
+        var fname = $("#afname").val();
+        var lname = $("#alname").val();
+        var email = $("#aemail").val();
+        var phone = $("#aphone").val();
+        var course = $("#acourse").val();
+
+        // Validate the form fields again
+        var isValid = true;
+
+        // Regular expressions
+        const nameRegex = /^[A-Za-z\s]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /((\+*)((0[ -]*)*|((91 )*))((\d{12})+|(\d{10})+))|\d{5}([- ]*)\d{6}/;
+
+        // Validate name
+        if (!nameRegex.test(fname.trim())) {
+            $("#afname-label").addClass("invalid");
+            isValid = false;
+        } else {
+            $("#demo1").text("");
+            $("#afname-label").toggleClass("invalid", false).toggleClass("valid", fname.trim() !== "");
+        }
+
+        if (!nameRegex.test(lname.trim())) {
+            $("#alname-label").addClass("invalid");
+            isValid = false;
+        } else {
+            $("#demo5").text("");
+            $("#alname-label").toggleClass("invalid", false).toggleClass("valid", lname.trim() !== "");
+        }
+
+        // Validate email
+        if (!emailRegex.test(email.trim())) {
+            $("#aemail-label").addClass("invalid");
+            isValid = false;
+        } else {
+            $("#demo3").text("");
+            $("#aemail-label").toggleClass("invalid", false).toggleClass("valid", email.trim() !== "");
+        }
+
+        // Validate phone
+        if (!phoneRegex.test(phone.trim())) {
+            $("#aphone-label").addClass("invalid");
+            isValid = false;
+        } else {
+            $("#demo2").text("");
+            $("#aphone-label").toggleClass("invalid", false).toggleClass("valid", phone.trim() !== "");
+        }
+
+        // Validate course
+        if (course === '') {
+            $("#acourse-label").addClass("invalid");
+            isValid = false;
+        } else {
+            $("#demo4").text("");
+            $("#acourse-label").toggleClass("invalid", false).toggleClass("valid", course !== '');
+        }
+
+        if (isValid) {
+            // Submit the form data
+            $("#application-form1").submit();
+
+            // Perform additional actions or open the PDF
+            // Example: Open the PDF in a new tab
+            window.open('../static/images/de.pdf', '_blank');
+        }
+    }
+
+    // Event listeners to check input validity and update asterisk color
+    $(document).ready(function () {
+        $("#afname").on("input", function () {
+            $("#afname-label").toggleClass("valid", this.validity.valid && this.value !== '');
+        });
+
+        $("#alname").on("input", function () {
+            $("#alname-label").toggleClass("valid", this.validity.valid && this.value !== '');
+        });
+
+        $("#aemail").on("input", function () {
+            $("#aemail-label").toggleClass("valid", this.validity.valid && this.value !== '');
+        });
+
+        $("#aphone").on("input", function () {
+            $("#aphone-label").toggleClass("valid", this.validity.valid && this.value !== '');
+        });
+
+        $("#acourse").on("change", function () {
+            $("#acourse-label").toggleClass("valid", this.validity.valid && this.value !== '');
+        });
+    });
+</script>
+
+<script>
+    const timeCoverter = {
+        toMS(originalDuration) {
+            if (typeof originalDuration !== "string") return 0;
+            const duration = originalDuration.replace(/[A-Za-z]/g, "");
+            if (originalDuration.includes("ms")) return parseInt(duration);
+            if (originalDuration.includes("s"))
+                return parseInt(parseFloat(duration) * 1000);
+            return 0;
+        }
+    };
+
+    const isDesktop = () => window.innerWidth > 992;
+
+    class Slider {
+        constructor(element, config = {}) {
+            if (element instanceof Element) this._element = element;
+            else if (typeof element === "string")
+                this._element = document.querySelector(element);
+            else throw new Error("Slider constructor requires an element or selector");
+
+            this._config = typeof config === "object" ? config : {};
+            this._init();
+        }
+
+        _init() {
+            this._getContainer();
+            this._getListItem();
+            if (this._totalItem === 0) return;
+            this._setupItem();
+            this._getTransitionItem();
+            if (this._config.autoplay) this._startAutoplay();
+        }
+
+        _getContainer() {
+            this._container = this._element.querySelector(".slider-list");
+            this._containerGap = getComputedStyle(this._container).gap;
+            if (this._config.reverse) this._container.style.justifyContent = "end";
+        }
+
+        _getListItem() {
+            this._sliderItems = this._container.querySelectorAll(".slider-item");
+            this._totalItem = this._sliderItems.length;
+        }
+
+        _setupItem() {
+            if (this._totalItem === 1) {
+                this._container.style.gridAutoColumns = "100%";
+                this._container.appendChild(this._sliderItems[0].cloneNode(true));
+                this._sliderItems = this._element.querySelectorAll(".slider-item");
+                this._totalItem = this._sliderItems.length;
+            }
+            if (this._totalItem === 2) this._container.style.gridAutoColumns = "100%";
+            if (!isDesktop()) return;
+            if (this._totalItem === 3) this._container.style.gridAutoColumns = "50%";
+            if (this._totalItem === 4)
+                this._container.style.gridAutoColumns = "33.33333333%";
+            if (this._totalItem >= 5) this._container.style.gridAutoColumns = "25%";
+        }
+
+        _getTransitionItem() {
+            this._originalTransitionDuration = getComputedStyle(
+                this._container
+            ).transitionDuration;
+            this._transitionDuration =
+                timeCoverter.toMS(this._originalTransitionDuration) ?? 0;
+        }
+
+        update() {
+            this._getListItem();
+            this._setupItem();
+        }
+
+        _startAutoplay() {
+            const repeat = (direction = null) => {
+                this._move().then(() => {
+                    repeat();
+                });
+            };
+            repeat();
+        }
+
+        _move(direction = null) {
+            const resetTime = 20;
+            setTimeout(() => {
+                this._container.style.transitionDuration = this._originalTransitionDuration;
+                if (this._config.reverse || direction === "prev") {
+                    this._container.style.transform = `translateX(calc(${this._sliderItems[0]?.offsetWidth}px + ${this._containerGap}))`;
+                } else {
+                    this._container.style.transform = `translateX(calc(-${this._sliderItems[0]?.offsetWidth}px - ${this._containerGap}))`;
+                }
+            }, resetTime);
+            return new Promise((resolve) => {
+                this._swap(direction);
+                setTimeout(() => {
+                    this._container.style.transitionDuration = "0s";
+                    this._container.style.transform = `translateX(0px)`;
+                    this._pause = false;
+                    resolve(true);
+                }, this._transitionDuration);
+            });
+        }
+
+        _swap(direction = null) {
+            if (this._config.reverse || direction === "prev") {
+                const firstChild = this._sliderItems[0];
+                const lastChild = this._sliderItems[this._totalItem - 1];
+                this._container.insertBefore(lastChild, firstChild);
+                this.update();
+            } else {
+                this.update();
+                const firstChild = this._sliderItems[0];
+                this._container.removeChild(firstChild);
+                this._container.appendChild(firstChild);
+            }
+        }
+    }
+
+    const slider = new Slider(".slider12", {
+        autoplay: true,
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!e.target.matches('[data-toggle="slider-action"]')) return;
+        if (!e.target.matches("[data-direction]")) return;
+        const direction = e.target.dataset.direction;
+        // if(direction === "next") slider.next()
+        // if(direction === "prev") slider.prev()
+    });
+
+</script>
+
+<script>
+    const timeCoverter12 = {
+        toMS(originalDuration) {
+            if (typeof originalDuration !== "string") return 0;
+            const duration = originalDuration.replace(/[A-Za-z]/g, "");
+            if (originalDuration.includes("ms")) return parseInt(duration);
+            if (originalDuration.includes("s"))
+                return parseInt(parseFloat(duration) * 1000);
+            return 0;
+        }
+    };
+
+    const isDesktop12 = () => window.innerWidth > 992;
+
+    class Slider13 {
+        constructor(element, config = {}) {
+            if (element instanceof Element) this._element = element;
+            else if (typeof element === "string")
+                this._element = document.querySelector(element);
+            else throw new Error("Slider constructor requires an element or selector");
+
+            this._config = typeof config === "object" ? config : {};
+            this._init();
+        }
+
+        _init() {
+            this._getContainer();
+            this._getListItem();
+            if (this._totalItem === 0) return;
+            this._setupItem();
+            this._getTransitionItem();
+            if (this._config.autoplay) this._startAutoplay();
+        }
+
+        _getContainer() {
+            this._container = this._element.querySelector(".slider-list");
+            this._containerGap = getComputedStyle(this._container).gap;
+            if (this._config.reverse) this._container.style.justifyContent = "end";
+        }
+
+        _getListItem() {
+            this._sliderItems = this._container.querySelectorAll(".slider-item");
+            this._totalItem = this._sliderItems.length;
+        }
+
+        _setupItem() {
+            if (this._totalItem === 1) {
+                this._container.style.gridAutoColumns = "100%";
+                this._container.appendChild(this._sliderItems[0].cloneNode(true));
+                this._sliderItems = this._element.querySelectorAll(".slider-item");
+                this._totalItem = this._sliderItems.length;
+            }
+            if (this._totalItem === 2) this._container.style.gridAutoColumns = "100%";
+            if (!isDesktop()) return;
+            if (this._totalItem === 3) this._container.style.gridAutoColumns = "50%";
+            if (this._totalItem === 4)
+                this._container.style.gridAutoColumns = "33.33333333%";
+            if (this._totalItem >= 5) this._container.style.gridAutoColumns = "25%";
+        }
+
+        _getTransitionItem() {
+            this._originalTransitionDuration = getComputedStyle(
+                this._container
+            ).transitionDuration;
+            this._transitionDuration =
+                timeCoverter.toMS(this._originalTransitionDuration) ?? 0;
+        }
+
+        update() {
+            this._getListItem();
+            this._setupItem();
+        }
+
+        _startAutoplay() {
+            const repeat = (direction = null) => {
+                this._move().then(() => {
+                    repeat();
+                });
+            };
+            repeat();
+        }
+
+        _move(direction = null) {
+            const resetTime = 20;
+            setTimeout(() => {
+                this._container.style.transitionDuration = this._originalTransitionDuration;
+                if (this._config.reverse || direction === "prev") {
+                    this._container.style.transform = `translateX(calc(${this._sliderItems[0]?.offsetWidth}px + ${this._containerGap}))`;
+                } else {
+                    this._container.style.transform = `translateX(calc(-${this._sliderItems[0]?.offsetWidth}px - ${this._containerGap}))`;
+                }
+            }, resetTime);
+            return new Promise((resolve) => {
+                this._swap(direction);
+                setTimeout(() => {
+                    this._container.style.transitionDuration = "0s";
+                    this._container.style.transform = `translateX(0px)`;
+                    this._pause = false;
+                    resolve(true);
+                }, this._transitionDuration);
+            });
+        }
+
+        _swap(direction = null) {
+            if (this._config.reverse || direction === "prev") {
+                const firstChild = this._sliderItems[0];
+                const lastChild = this._sliderItems[this._totalItem - 1];
+                this._container.insertBefore(lastChild, firstChild);
+                this.update();
+            } else {
+                this.update();
+                const firstChild = this._sliderItems[0];
+                this._container.removeChild(firstChild);
+                this._container.appendChild(firstChild);
+            }
+        }
+    }
+
+    const slider13 = new Slider(".slider13", {
+        autoplay: true,
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!e.target.matches('[data-toggle="slider-action"]')) return;
+        if (!e.target.matches("[data-direction]")) return;
+        const direction = e.target.dataset.direction;
+    });
+
+</script>
+
+{% endblock %}

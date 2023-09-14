@@ -1,0 +1,186 @@
+{% extends 'adminpanel/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+  :root {
+    --vs-primary: 29 92 255;
+  }
+  dialog {
+    padding: 1rem 3rem;
+    background: white;
+    max-width: 400px;
+    padding-top: 2rem;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+    animation: fadeIn 1s ease both;
+    &::backdrop {
+      animation: fadeIn 1s ease both;
+      background: rgb(255 255 255 / 40%);
+      z-index: 2;
+      backdrop-filter: blur(20px);
+    }
+    .x {
+      filter: grayscale(1);
+      border: none;
+      background: none;
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      transition: ease filter, transform 0.3s;
+      cursor: pointer;
+      transform-origin: center;
+      &:hover {
+        filter: grayscale(0);
+        transform: scale(1.1);
+      }
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 2rem;
+      padding-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.3rem;
+      padding: 0.5rem 0;
+      a {
+        &:visited {
+          color: rgb(var(--vs-primary));
+        }
+      }
+    }
+  }
+  button.primary {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #fff !important;
+    background: goldenrod;
+    padding: 13px 25px;
+    border-radius: 17px;
+    transition: background-color 0.1s ease;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -10px rgb(var(--vs-primary) / 50%);
+    &:hover {
+      box-shadow: 0 20px 20px -10px rgb(var(--vs-primary) / 50%);
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+    <div class="content-body">
+        <div class="container-fluid">
+            <h1 class="mb-3">News Letters</h1>
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Remark</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in subscribe_data %}
+                    <tr>
+                        <td>{{ item.sname }}</td>
+                        <td>{{ item.semail }}</td>
+                        <td>{{ item.sstatus }}</td>
+                        <td>{{ item.sremark }}</td>
+                        <td>
+                            <button class="primary" onclick="openDialog('{{ item.id }}')">
+                              Update Status
+                            </button>
+                          </td>
+                          <dialog class="modal-lg" id="dialog-{{item.id}}">
+                            <h2>Update Status</h2>
+                            <label class="form-label" for = "status">Status:</label>
+                            <select class="form-select mb-2" id = "status-{{item.id}}">
+                                {% for status in statuses %}
+                                <option value ="{{status.0}}" {% if status.0 == item.sstatus %}selected{% endif %}>{{status.1}}</option>
+                                {% endfor %}
+                            </select>
+                            <label class="form-label" for = "remark">Remark:</label>
+                            <textarea class="form-control mb-2" id = "remark-{{item.id}}">{{item.sremark}}</textarea>
+                            <button class="btn btn-primary" onclick = "updateContact('{{item.id}}')">Update</button>
+                            <button
+                              onclick="closeDialog('{{item.id}}');"
+                              aria-label="close"
+                              class="x"
+                            >
+                              ❌
+                            </button>
+                          </dialog>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Remark</th>
+                        <th>Action</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script>
+        function openDialog(id){
+            const dialog = document.getElementById(`dialog-${id}`)
+            dialog.showModal()
+        }
+        function closeDialog(id){
+            const dialog = document.getElementById(`dialog-${id}`)
+            dialog.close()
+        }
+    
+        function updateContact(id){
+            const status = document.getElementById(`status-${id}`).value
+            const remark = document.getElementById(`remark-${id}`).value
+    
+            $.ajax({
+                type:"POST",
+                url:"{% url 'eshikshaadminpanelapp:update_newsletters_status' %}",
+                data:{
+                    csrfmiddlewaretoken:"{{csrf_token}}",
+                    newsletters_id:id,
+                    status:status,
+                    remark:remark
+                },
+                success:function(response){
+                    if(response.status === "success"){
+                        const statusCell = document.querySelector(`#example #row-${id} .status`)
+                        const remarkCell = document.querySelector(`#example #row-${id} .remark`)
+                        statusCell.textContent= status
+                        remarkCell.textContent = remark
+    
+                        closeDialog(id)
+                    }else{
+                        alert("Failed to update data")
+                    }
+                },
+                error:function(xhr,errmsg,err){
+                    console.log(xhr.status + ":" + xhr.responseText)
+                }
+            })
+        }
+    </script>
+   
+{% endblock %}
+        

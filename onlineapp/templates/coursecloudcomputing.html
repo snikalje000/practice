@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+
+
+<section class="hero-wrap hero-wrap-2"
+	style="background-image: url(../static/images/clo1.webp);">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text align-items-center justify-content-center">
+			<div class="col-md-6 ftco-animate text-center">
+				<p class="breadcrumbs d-flex justify-content-center"><span class="mr-2"><a href="{% url 'onlineapp:index' %}">Home <i
+								class="fa fa-chevron-right"></i></a></span> <span>Course Lists <i
+							class="fa fa-chevron-right"></i></span></p>
+				<h1 class="mb-0 bread">Cloud</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="ftco-section bg-light">
+	<div class="container-fluid">
+		<div class="col-lg-12 text-left px-4">
+			<p class="text-left text-dark"> <b> <u> About the Program</u></b></p>
+			<h3>Propel Your Career Forward with the power of Cloud Computing!</h3>
+			<p  class="text-justify pb-0 mb-0"> Dive into the realm of virtualized environments, scalable architectures, and seamless data management, all while gaining hands-on experience with leading cloud platforms. 
+				<p>Join us today, and soar to new heights as you become the driving force behind the cloud revolution!</p>  			</p>
+		</div>
+		<div class="row justify-content-center p-4">
+			<section class="card container grid">
+				<div class="card__container grid">
+					<!--==================== CARD 1 ====================-->
+					<article class="card__content grid">
+						<div class="card__pricing">
+							<div class="card__pricing-number">
+								<!-- <span class="card__pricing-symbol">$</span>0 -->
+							</div>
+							<span class="card__pricing-month"> <span style="font-size: 20px;">6</span> <br> Months</span>
+						</div>
+		
+						<header class="card__header" style="  width: min-content !important;
+						">
+							
+							<!-- <span class="card__header-subtitle">Free plan</span> -->
+							<p class="card__header-title">Certificate Program</p>
+						</header>
+						
+						<ul class="card__list grid mx-n5" style="row-gap: 0rem !important;">
+							<li class="card__list-item">
+								<i class="uil uil-check card__list-icon"></i>
+								<p class="card__list-description pb-0">Industry Live Projects</p>
+							</li>
+							<li class="card__list-item">
+								<i class="uil uil-check card__list-icon"></i>
+								<p class="card__list-description pb-0">Instructor Led Classes</p>
+							</li>
+							<li class="card__list-item">
+								<i class="uil uil-check card__list-icon"></i>
+								<p class="card__list-description pb-0">Dedicated Doubt Resolution</p>
+							</li>
+							<li class="card__list-item">
+							  <i class="uil uil-check card__list-icon"></i>
+							  <p class="card__list-description pb-0">No Cost EMI Options</p>
+							</li>
+							<li class="card__list-item">
+								<i class="uil uil-check card__list-icon"></i>
+								<p class="card__list-description pb-0">Placement assistance</p>
+							</li>
+						</ul>
+		
+						<button class="card__button">Choose this plan</button>
+					</article>
+		
+					<!--==================== CARD 2 ====================-->
+					<article class="card__content grid">
+						<div class="card__pricing">
+							<div class="card__pricing-number">
+								<!-- <span class="card__pricing-symbol">$</span> -->
+							</div>
+							<!-- <span class="card__pricing-month">12/months</span> -->
+							<span class="card__pricing-month"> <span style="font-size: 20px;">12</span> <br> Months</span>
+	  
+						</div>
+		
+						<header class="card__header">
+	  
+							<!-- <span class="card__header-subtitle">Most popular</span> -->
+							<p class="card__header-title">Advanced Learning Program</p>
+						</header>
+						
+						<ul class="card__list grid mx-n5" style="row-gap: 0rem !important;">
+							<!-- <li class="card__list-item">
+								<i class="uil uil-check card__list-icon"></i>
+								<p class="card__list-description pb-0">Profile Building Workshop</p>
+							</li> -->
+							<li class="card__list-item">
+								<i class="uil uil-check card__list-icon"></i>
+								<p class="card__list-description pb-0">Get Trained by Top 1%</p>
+							</li>
+							<li class="card__list-item">
+								<i class="uil uil-check card__list-icon"></i>
+								<p class="card__list-description pb-0">
+								  Live Projects, Real-World Skills.</p>
+							</li>
+							<li class="card__list-item">
+								<i class="uil uil-check card__list-icon"></i>
+								<p class="card__list-description pb-0">Continuous Evaluation, Enhanced Results.</p>
+							</li>
+							<li class="card__list-item">
+								<i class="uil uil-check card__list-icon"></i>
+								<p class="card__list-description pb-0">No cost EMI options</p>
+							</li>
+							<li class="card__list-item">
+							  <i class="uil uil-check card__list-icon"></i>
+							  <p class="card__list-description pb-0">Job guarantee program</p>
+						  </li>
+						</ul>
+		
+						<button class="card__button">Choose this plan</button>
+					</article>
+					<!-- inspired by https://adobe.ly/3BHoIy5 -->
+				</div>
+			  </section>
+		</div>
+		<div class="d-flex justify-content-center">
+
+			<p><button class="button px-5 btn card__button text-white" href="#"  data-open="get-pro-modal"
+					aria-controls="get-pro-modal" aria-haspopup="true" tabindex="0">Download Brochure</button></p>
+		</div>
+	</div>
+	<!-- ./container-->
+</section>
+
+{% endblock %}

@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<!-- Title -->
+		<title>eShiksa Admin Panel</title>
+
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="author" content="DexignZone">
+		<meta name="robots" content="">
+
+		<meta name="keywords"
+			content="accommodation, admin dashboard, admin template, apartment, booking, bootstrap 5, dinning, hostel, hotel booking, hotel template, motel, resort, restaurant, room">
+		<meta name="description"
+			content="Innap is a clean-coded, responsive HTML template that can be easily customised to fit the needs of various hotel booking and hotel template, booking, dinning, hostel, and other businesses">
+
+		<meta property="og:title" content="Innap - Hotel Admin Dashboard Bootstrap Templates">
+		<meta property="og:description"
+			content="Innap is a clean-coded, responsive HTML template that can be easily customised to fit the needs of various hotel booking and hotel template, booking, dinning, hostel, and other businesses">
+		<meta property="og:image" content="https://innap.dexignzone.com/xhtml/social-image.png">
+		<meta name="format-detection" content="telephone=no">
+
+		<!-- Mobile Specific -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Favicon icon -->
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+		<link rel="stylesheet" href="{% static 'adminpanel/vendor/chartist/css/chartist.min.css' %}">
+		<link href="{% static 'adminpanel/vendor/jquery-nice-select/css/nice-select.css' %}" rel="stylesheet">
+		<link href="{% static 'adminpanel/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}"
+			rel="stylesheet">
+		<!-- Style css -->
+		<link href="{% static 'adminpanel/css/style.css' %}" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+	</head>
+
+	<body>
+
+		<!--*******************
+        Preloader start
+    ********************-->
+		<div id="preloader">
+			<div class="waviy">
+				<span style="--i:1">L</span>
+				<span style="--i:2">o</span>
+				<span style="--i:3">a</span>
+				<span style="--i:4">d</span>
+				<span style="--i:5">i</span>
+				<span style="--i:6">n</span>
+				<span style="--i:7">g</span>
+				<span style="--i:8">.</span>
+				<span style="--i:9">.</span>
+				<span style="--i:10">.</span>
+			</div>
+		</div>
+		<!--*******************
+        Preloader end
+    ********************-->
+
+		<!--**********************************
+        Main wrapper start
+    ***********************************-->
+		<div id="main-wrapper">
+
+			{% include 'adminpanel/navbar.html' %}
+
+			{% include 'adminpanel/sidebar.html' %}
+
+			{% block content %}
+
+			{% endblock %}
+		</div>
+		<!--**********************************
+            Sidebar end
+        ***********************************-->
+
+
+		<!--**********************************
+            Footer start
+        ***********************************-->
+		<div class="footer">
+
+			<div class="copyright">
+				<p>Copyright © Designed &amp; Developed by <a href="https://cloudstrats.com/"
+						target="_blank">CloudStrats</a> 2023</p>
+			</div>
+		</div>
+		<!--**********************************
+            Footer end
+        ***********************************-->
+
+
+		<!-- Required vendors -->
+		<script src="{% static 'adminpanel/js/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'adminpanel/js/popper.min.js' %}"></script>
+		<script src="{% static 'adminpanel/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'adminpanel/js/main.js' %}"></script>
+
+		<script src="{% static 'adminpanel/vendor/global/global.min.js' %}"></script>
+		<script src="{% static 'adminpanel/vendor/chart.js/Chart.bundle.min.js' %}"></script>
+		<script src="{% static 'adminpanel/vendor/jquery-nice-select/js/jquery.nice-select.min.js' %}"></script>
+
+		<!-- Chart piety plugin files -->
+		<script src="{% static 'adminpanel/vendor/peity/jquery.peity.min.js' %}"></script>
+
+		<!-- Apex Chart -->
+		<script src="{% static 'adminpanel/vendor/apexchart/apexchart.js' %}"></script>
+
+		<script src="{% static 'adminpanel/vendor/bootstrap-datetimepicker/js/moment.js' %}"></script>
+		<script
+			src="{% static 'adminpanel/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+
+		<!-- Dashboard 1 -->
+		<script src="{% static 'adminpanel/js/dashboard/dashboard-1.js' %}"></script>
+		<script src="{% static 'adminpanel/js/custom.min.js' %}"></script>
+		<script src="{% static 'adminpanel/js/deznav-init.js' %}"></script>
+		<!-- {% comment %}
+		<script src="{% static 'adminpanel/js/demo.js' %}"></script> {% endcomment %}
+		{% comment %}
+		<script src="{% static 'adminpanel/js/styleSwitcher.js' %}"></script> {% endcomment %} -->
+		<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.colVis.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+
+		<script>
+			$(function () {
+				$('#datetimepicker').datetimepicker({
+					inline: true,
+				});
+			});
+
+			$(document).ready(function () {
+				$(".booking-calender .fa.fa-clock-o").removeClass(this);
+				$(".booking-calender .fa.fa-clock-o").addClass('fa-clock');
+			});
+
+			$(document).ready(function () {
+				$('#example').DataTable({
+					dom: 'Bfrtip',
+					buttons: [
+						{
+							extend: 'copyHtml5',
+							exportOptions: {
+								columns: [0, ':visible']
+							}
+						},
+						{
+							extend: 'excelHtml5',
+							exportOptions: {
+								columns: ':visible'
+							}
+						},
+						{
+							extend: 'pdfHtml5',
+							exportOptions: {
+								columns: [0, 1, 2, 5]
+							}
+						},
+						'colvis'
+					]
+				});
+			});
+
+
+		</script>
+
+
+	</body>
+
+</html>

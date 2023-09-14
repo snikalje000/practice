@@ -1,0 +1,839 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url('../static/images/ab.png');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate pb-5 text-center">
+                <p class="breadcrumbs" style="    display: flex !important;
+                justify-content: center;"><span class="mr-2"><a href="{% url 'onlineapp:index' %}">Home <i
+                                class="fa fa-chevron-right"></i></a></span> <span>About us <i
+                            class="fa fa-chevron-right"></i></span></p>
+                <h1 class="mb-0 bread">About Us</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section about-section">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-6 heading-section pr-md-5 ftco-animate d-flex align-items-center ">
+                <div class="w-100 mb-4 mb-md-0">
+                    <h2 class="subheading ">WHO WE ARE</h2>
+                    <p style="text-align: justify; color:#000;">At eShiksha, we are dedicated to empowering individuals
+                        like you
+                        with the skills and knowledge needed to thrive in today's competitive world. As a leading
+                        training academy, we offer a wide range of offline courses designed to help you master your
+                        skills, enhance your career prospects, and achieve your goals.
+                    </p>
+                    <b class="mb-3 mt-0 text-dark">Join us today and seize the keys to your destiny!</b>
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+
+                <div class="img-gallery-container">
+                    <div class="row">
+
+                        <figure class="img-gallery"> 
+                            <a href="{% url 'onlineapp:courses' %}">
+                                <img src="{% static 'images/ais1.webp' %}" width="100%" height="auto" alt="Business Image">
+                                <figcaption class="desc">
+                                    <p class="text-dark">Artificial Intelligence</p>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure class="img-gallery">
+                            <a href="{% url 'onlineapp:coursedataanalytics' %}">
+                                <img src="{% static 'images/data1.webp' %}"  width="100%" height="auto" alt="Data Science Image">
+                                <figcaption class="desc">
+                                    <p class="text-dark">Data Science</p>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="row">
+
+                        <figure class="img-gallery">
+                            <a href="{% url 'onlineapp:coursecloudcomputing' %}">
+                                <img src="{% static 'images/clo1.webp' %}"
+                                    alt="Computer Engineering Image"  width="100%" height="auto">
+                                <figcaption class="desc">
+                                    <p class="text-dark">Cloud</p>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure class="img-gallery">
+                            <a href="{% url 'onlineapp:coursecybersecurity' %}">
+                                <img src="{% static 'images/cyber1.webp' %}" alt="Biological Science Image"  width="100%" height="auto">
+                                <figcaption class="desc">
+                                    <p class="text-dark">Cyber Security</p>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="client1 pt-5 pb-0" style="background: #f9faff;">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8 heading-section text-center ftco-animate ">
+                <h2>Why <span style="color:goldenrod;">eShiksha</span></h2>
+            </div>
+            <div class="slider12">
+                <ul class="slider-list">
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/job ready.png' %}" alt="whyeshiskha">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">100% Job <br> ready program</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/at.png' %}" alt="whyeshiskha">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">Top Notch <br> Industry mentors</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/ip.png' %}" alt="whyeshiskha">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">Industry-led <br> live projects</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/1m.png' %}" alt="whyeshiskha">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">1:1 Focused <br> Mentorship</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/accreditation.png' %}" alt="whyeshiskha">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">National & International <br> accreditation</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item">
+                        <div class="d-block">
+                            <div class=" text-center">
+                                <img loading="lazy" style="width: 15% !important; height:auto !important;"
+                                    src="{% static 'images/lucrative financial.png' %}" alt="whyeshiskha">
+                            </div>
+                            <div class="text-center">
+                                <span class="text-dark text-center">Lucrative Financial <br> support</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end intro video -->
+<section class="client pt-5 pb-0" style="background: #fff;">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8 heading-section text-center ftco-animate ">
+                <h2>We're Partnered With Leading <span style="text-transform: capitalize; color:goldenrod;">Institutions
+                        And Corporations</span></h2>
+            </div>
+            <div class="slider13">
+                <ul class="slider-list">
+                    <li class="slider-item">
+                        <img loading="lazy" height="auto" alt="eshikshapartner" width="120" src="{% static 'images/LOGOpng.png' %}">
+                    </li> 
+                    <li class="slider-item">
+
+                        <img loading="lazy" height="auto" alt="eshikshapartner" width="120" src="{% static 'images/microsoft.png' %}">
+                    </li> 
+                    <li class="slider-item">
+
+                        <img loading="lazy" height="auto" alt="eshikshapartner" width="120" src="{% static 'images/aws.png' %}">
+                    </li> 
+                    <li class="slider-item">
+
+                        <img loading="lazy" height="auto" alt="eshikshapartner" width="120" src="{% static 'images/googlecloud.png' %}">
+                    </li> 
+                    <li class="slider-item">
+
+                        <img loading="lazy" height="auto" alt="eshikshapartner" width="120" src="{% static 'images/oracle.png' %}">
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section testimony-section1 bg-light">
+    <div class="overlay" style="background-image: url(../static/images/studentclass.webp);"></div>
+    <div class="container">
+        <div class="row pb-4">
+            <div class="col-md-7 heading-section ftco-animate">
+                <span class="subheading">Who Should Join eShiksha</span>
+            </div>
+        </div>
+    </div>
+    <div class="container container-2">
+        <div class="row ftco-animate">
+            <div class="col-lg-12 col-md-12">
+                <div class="carousel-testimony1 owl-carousel">
+                    <div class="item">
+                        <div class="testimony-wrap1 py-4">
+                            <div class="text">
+                                <h4 class="mb-2 text-center">IT Professionals</h4>
+                                <ul class="itprof">
+                                    <li class="listit" style="list-style: none;margin-bottom: 10px;">Stay updated with the latest trends and technologies</li>
+                                    <li class="listit" style="list-style: none;margin-bottom: 10px;">Enhance your technical skills for career growth </li>
+                                    <li class="listit" style="list-style: none;margin-bottom: 10px;">Boost employability with in-demand IT expertise</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="testimony-wrap1 py-4">
+                            <div class="text">
+                                <h4 class="mb-2 text-center">Tech Enthusiasts</h4>
+                                <ul class="itprof">
+                                    <li class="listit" style="list-style: none;margin-bottom: 10px;">Get hands-on with state-of-the-art tools.</li>
+                                    <li class="listit" style="list-style: none;margin-bottom: 10px;">Connect with like-minded enthusiasts for collaboration</li>
+                                    <li class="listit" style="list-style: none;margin-bottom: 10px;">Unlock tech career prospects</li>
+                                    <br>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="testimony-wrap1 py-4">
+                            <div class="text">
+                                <h4 class="mb-2 text-center">College Graduates</h4>
+                                <ul class="itprof">
+                                    <li class="listit" style="list-style: none;margin-bottom: 10px;">Bridge theory and practice for real-world readiness</li>
+                                    <li class="listit" style="list-style: none;margin-bottom: 10px;">Gain industry-relevant skills for better job prospects</li>
+                                    <li class="listit" style="list-style: none;margin-bottom: 10px;">Access career resources and guidance for success</li>                                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section p-0 py-5">
+    <div class="container-fluid p-0 overflow-hidden">
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-lg-8 col-md-7 mb-3 order-md-last d-flex align-items-stretch border">
+                            <div class="contact-wrap w-100 p-md-5 p-0">
+                                <h3 class="mb-4">Contact Us</h3>
+                                <form action="contact_us/" method="POST" id="contactForm2" 
+                                    class="contactForm">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" for="name">Full Name</label>
+                                                <div class="input-wrapper">
+
+                                                    <input type="text" class="form-control" name="cname" id="cname"
+                                                        placeholder="Name">
+                                                        <div id="NameErr"></div>
+                                                        <span id="Namecheck"></span>
+                                                </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" for="email">Email Address</label>
+                                                <div class="input-wrapper">
+
+                                                    <input type="email" class="form-control" name="cemail" id="cemail"
+                                                        placeholder="Email">
+                                                        <div id="EmailErr"></div>
+                                                        <span id="Emailcheck"></span>
+                                                </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" for="phone">Mobile No</label>
+                                                <div class="input-wrapper">
+
+                                                    <input type="tel" class="form-control" name="cphone" id="cphone"
+                                                        placeholder="Mobile No">
+                                                        <div id="MobileErr"></div>
+                                                        <span id="Mobilecheck"></span>
+                                                </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" for="subject">Enquiry Type</label>
+                                                <div class="input-wrapper">
+
+                                                    <input type="text" class="form-control" name="csubject" id="csubject"
+                                                        placeholder="Enquiry">
+                                                        <div id="EnquiryErr"></div>
+                                                        <span id="Enquirycheck"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" for="#">Message</label>
+                                                <div class="input-wrapper">
+
+                                                    <textarea name="cmessage" class="form-control" id="cmessage" cols="30"
+                                                        rows="4" placeholder="Message"></textarea>
+                                                        <div id="MessageErr"></div>
+                                                        <span id="Messagecheck"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <button type="submit" id="submit" class="btn btn-primary" data-toggle="modal" data-target="#contact1">Send Message</button>
+
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-5 mb-3 d-flex align-items-stretch">
+                            <div class="info-wrap bg-primary w-100 p-md-5 p-4"
+                                style="background-color: #000 !important;">
+                                <div class="text-center">
+                                    <img src="../static/images/logbg.webp" width="60%" height="auto" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-intro ftco-section ftco-no-pb py-0">
+    <div class="container-fluid p-0 overflow-hidden">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <div class="img" style="background-image: url(../static/images/bg_4.webp);">
+                    <div class="overlay"></div>
+                    <div class="col-md-6 mx-auto mb-3">
+                        <div class="form-group">
+                            <h2 class="mb-3 text-center text-capitalize text-white"
+                                style="letter-spacing: 1px; font-weight:bold; font-size:30px">Subscribe to our
+                                newsletter and <br> our social channels</h2>
+                            <form action="maildata/" method="POST" id="emailtrigger" name="emailtrigger"
+                                class="emailtrigger">
+                                {% csrf_token %}
+                                <div class="d-flex">
+                                    <div class="col-lg-6 col-md-6">
+                                        <input type="text" class="form-control mb-3" name="sname" required
+                                            placeholder="Your Name">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <input type="email" class="form-control mb-3" name="email" required
+                                            placeholder="Email">
+                                    </div>
+                                </div>
+
+                                <p class="mb-0"><button class="btn btn-primary px-4 py-3"
+                                        style="padding-top: 10px !important; padding-bottom:10px !important;"
+                                        type="submit" data-toggle="modal" data-target="#subcribe1">Subscribe
+                                        Now</button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+  integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+$(document).ready(function() {
+    // Title validation
+    $('#Namecheck').hide();
+    var NameErr = true;
+
+    $('#cname').keyup(function() {
+    Namecheck();
+    });
+
+    function Namecheck() {
+    let nameVal = $('#cname').val();
+    if (nameVal == '' || nameVal == null) {
+        $('#Namecheck').show();
+        $('#Namecheck').html('Enter Name');
+        $('#Namecheck').css("color", "red");
+        $('#Namecheck').css("font-size", "15px");
+
+        NameErr = false;
+        return false;
+    } else {
+        $('#Namecheck').hide();
+    }
+    }
+
+    // Email Validation
+    $('#Emailcheck').hide();
+    var EmailErr = true;
+
+    $('#cemail').keyup(function() {
+    Emailcheck();
+    });
+
+    function Emailcheck() {
+    let Emailval = $('#cemail').val();
+    let expr = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex pattern for email validation
+
+    if (Emailval == '' || Emailval == null || !expr.test(Emailval)) {
+        $('#Emailcheck').show();
+        $('#Emailcheck').html('Enter Correct Email');
+        $('#Emailcheck').css("color", "red");
+        $('#Emailcheck').css("font-size", "15px");
+
+        EmailErr = false;
+        return false;
+    } else {
+        $('#Emailcheck').hide();
+    }
+    }
+
+    // Department Validation
+    $('#Mobilecheck').hide();
+    var MobileErr = true;
+
+    $('#cphone').on('change', function() {
+    Mobilecheck();
+    console.log("changed")
+    });
+
+    function Mobilecheck() {
+    let cphoneVal = $('#cphone').val();
+    let expr = /^[0-9]{10}$/; // Regex pattern for 10-digit phone number validation
+
+    if (cphoneVal == '' || cphoneVal == null || !expr.test(cphoneVal)) {
+        $('#Mobilecheck').show();
+        $('#Mobilecheck').html('Enter a 10-digit Mobile Number');
+        $('#Mobilecheck').css("color", "red");
+        $('#Mobilecheck').css("font-size", "15px");
+
+        MobileErr = false;
+        return false;
+    } else {
+        $('#Mobilecheck').hide();
+    }
+    }
+
+    // IssueType validation
+    $('#Enquirycheck').hide();
+    var EnquiryErr = true;
+
+    $('#csubject').on('change', function() {
+    Enquirycheck();
+    console.log("changed")
+    });
+
+    function Enquirycheck() {
+    let csubjectVal = $('#csubject').val();
+    console.log(csubjectVal)
+    if (csubjectVal == '' || csubjectVal == null) {
+        console.log("lkjhgfcx")
+        $('#Enquirycheck').show();
+        $('#Enquirycheck').html('Enter Enquiry Type');
+        $('#Enquirycheck').css("color", "red");
+        $('#Enquirycheck').css("font-size", "15px");
+
+        EnquiryErr = false;
+        return false;
+    } else {
+        $('#Enquirycheck').hide();
+    }
+    }
+
+    // SubType validation
+    $('#Messagecheck').hide();
+    var MessageErr = true;
+
+    $('#cmessage').on('change', function() {
+    Messagecheck();
+    console.log("changed")
+    });
+
+    function Messagecheck() {
+    let cmessageVal = $('#cmessage').val();
+    console.log(cmessageVal)
+    if (cmessageVal == '' || cmessageVal == null) {
+        console.log("lkjhgfcx")
+        $('#Messagecheck').show();
+        $('#Messagecheck').html('Enter Message');
+        $('#Messagecheck').css("color", "red");
+        $('#Messagecheck').css("font-size", "17px");
+
+        MessageErr = false;
+        return false;
+    } else {
+        $('#Messagecheck').hide();
+    }
+    }
+
+
+    $('#submit').click(function() {
+    var returnRequired = $('#membershipRadios1').is(':checked');
+    console.log(returnRequired)
+
+    if (returnRequired == true) {
+        NameErr = true;
+        EmailErr = true;
+        MobileErr = true;
+        EnquiryErr = true;
+        MessageErr = true;
+
+        Namecheck();
+        Emailcheck();
+        Mobilecheck();
+        Enquirycheck();
+        Messagecheck();
+
+        if ((NameErr == true) && (EmailErr == true) && (MobileErr == true) && (EnquiryErr == true) && (MessageErr == true)) {
+        return true;
+        } else {
+        return false;
+        }
+    } else {
+        NameErr = true;
+        EmailErr = true;
+        MobileErr = true;
+        EnquiryErr = true;
+        MessageErr = true;
+
+        Namecheck();
+        Emailcheck();
+        Mobilecheck();
+        Enquirycheck();
+        Messagecheck();
+
+        if ((NameErr == true) && (EmailErr == true) && (MobileErr == true) && (EnquiryErr == true) && (MessageErr == true)) {
+        return true;
+        } else {
+        return false;
+        }
+    }
+    });
+});
+</script>
+
+<script>
+const timeCoverter = {
+    toMS(originalDuration) {
+        if (typeof originalDuration !== "string") return 0;
+        const duration = originalDuration.replace(/[A-Za-z]/g, "");
+        if (originalDuration.includes("ms")) return parseInt(duration);
+        if (originalDuration.includes("s"))
+            return parseInt(parseFloat(duration) * 1000);
+        return 0;
+    }
+};
+
+const isDesktop = () => window.innerWidth > 992;
+
+class Slider {
+    constructor(element, config = {}) {
+        if (element instanceof Element) this._element = element;
+        else if (typeof element === "string")
+            this._element = document.querySelector(element);
+        else throw new Error("Slider constructor requires an element or selector");
+
+        this._config = typeof config === "object" ? config : {};
+        this._init();
+    }
+
+    _init() {
+        this._getContainer();
+        this._getListItem();
+        if (this._totalItem === 0) return;
+        this._setupItem();
+        this._getTransitionItem();
+        if (this._config.autoplay) this._startAutoplay();
+    }
+
+    _getContainer() {
+        this._container = this._element.querySelector(".slider-list");
+        this._containerGap = getComputedStyle(this._container).gap;
+        if (this._config.reverse) this._container.style.justifyContent = "end";
+    }
+
+    _getListItem() {
+        this._sliderItems = this._container.querySelectorAll(".slider-item");
+        this._totalItem = this._sliderItems.length;
+    }
+
+    _setupItem() {
+        if (this._totalItem === 1) {
+            this._container.style.gridAutoColumns = "100%";
+            this._container.appendChild(this._sliderItems[0].cloneNode(true));
+            this._sliderItems = this._element.querySelectorAll(".slider-item");
+            this._totalItem = this._sliderItems.length;
+        }
+        if (this._totalItem === 2) this._container.style.gridAutoColumns = "100%";
+        if (!isDesktop()) return;
+        if (this._totalItem === 3) this._container.style.gridAutoColumns = "50%";
+        if (this._totalItem === 4)
+            this._container.style.gridAutoColumns = "33.33333333%";
+        if (this._totalItem >= 5) this._container.style.gridAutoColumns = "25%";
+    }
+
+    _getTransitionItem() {
+        this._originalTransitionDuration = getComputedStyle(
+            this._container
+        ).transitionDuration;
+        this._transitionDuration =
+            timeCoverter.toMS(this._originalTransitionDuration) ?? 0;
+    }
+
+    update() {
+        this._getListItem();
+        this._setupItem();
+    }
+
+    _startAutoplay() {
+        const repeat = (direction = null) => {
+            this._move().then(() => {
+                repeat();
+            });
+        };
+        repeat();
+    }
+
+    _move(direction = null) {
+        const resetTime = 20;
+        setTimeout(() => {
+            this._container.style.transitionDuration = this._originalTransitionDuration;
+            if (this._config.reverse || direction === "prev") {
+                this._container.style.transform = `translateX(calc(${this._sliderItems[0]?.offsetWidth}px + ${this._containerGap}))`;
+            } else {
+                this._container.style.transform = `translateX(calc(-${this._sliderItems[0]?.offsetWidth}px - ${this._containerGap}))`;
+            }
+        }, resetTime);
+        return new Promise((resolve) => {
+            this._swap(direction);
+            setTimeout(() => {
+                this._container.style.transitionDuration = "0s";
+                this._container.style.transform = `translateX(0px)`;
+                this._pause = false;
+                resolve(true);
+            }, this._transitionDuration);
+        });
+    }
+
+    _swap(direction = null) {
+        if (this._config.reverse || direction === "prev") {
+            const firstChild = this._sliderItems[0];
+            const lastChild = this._sliderItems[this._totalItem - 1];
+            this._container.insertBefore(lastChild, firstChild);
+            this.update();
+        } else {
+            this.update();
+            const firstChild = this._sliderItems[0];
+            this._container.removeChild(firstChild);
+            this._container.appendChild(firstChild);
+        }
+    }
+}
+
+const slider = new Slider(".slider12",{
+    autoplay: true,
+});
+
+document.addEventListener("click", function (e) {
+    if (!e.target.matches('[data-toggle="slider-action"]')) return;
+    if (!e.target.matches("[data-direction]")) return;
+    const direction = e.target.dataset.direction;
+    // if(direction === "next") slider.next()
+    // if(direction === "prev") slider.prev()
+});
+
+</script>
+
+<script>
+    const timeCoverter12 = {
+        toMS(originalDuration) {
+            if (typeof originalDuration !== "string") return 0;
+            const duration = originalDuration.replace(/[A-Za-z]/g, "");
+            if (originalDuration.includes("ms")) return parseInt(duration);
+            if (originalDuration.includes("s"))
+                return parseInt(parseFloat(duration) * 1000);
+            return 0;
+        }
+    };
+
+    const isDesktop12 = () => window.innerWidth > 992;
+
+    class Slider13 {
+        constructor(element, config = {}) {
+            if (element instanceof Element) this._element = element;
+            else if (typeof element === "string")
+                this._element = document.querySelector(element);
+            else throw new Error("Slider constructor requires an element or selector");
+
+            this._config = typeof config === "object" ? config : {};
+            this._init();
+        }
+
+        _init() {
+            this._getContainer();
+            this._getListItem();
+            if (this._totalItem === 0) return;
+            this._setupItem();
+            this._getTransitionItem();
+            if (this._config.autoplay) this._startAutoplay();
+        }
+
+        _getContainer() {
+            this._container = this._element.querySelector(".slider-list");
+            this._containerGap = getComputedStyle(this._container).gap;
+            if (this._config.reverse) this._container.style.justifyContent = "end";
+        }
+
+        _getListItem() {
+            this._sliderItems = this._container.querySelectorAll(".slider-item");
+            this._totalItem = this._sliderItems.length;
+        }
+
+        _setupItem() {
+            if (this._totalItem === 1) {
+                this._container.style.gridAutoColumns = "100%";
+                this._container.appendChild(this._sliderItems[0].cloneNode(true));
+                this._sliderItems = this._element.querySelectorAll(".slider-item");
+                this._totalItem = this._sliderItems.length;
+            }
+            if (this._totalItem === 2) this._container.style.gridAutoColumns = "100%";
+            if (!isDesktop()) return;
+            if (this._totalItem === 3) this._container.style.gridAutoColumns = "50%";
+            if (this._totalItem === 4)
+                this._container.style.gridAutoColumns = "33.33333333%";
+            if (this._totalItem >= 5) this._container.style.gridAutoColumns = "25%";
+        }
+
+        _getTransitionItem() {
+            this._originalTransitionDuration = getComputedStyle(
+                this._container
+            ).transitionDuration;
+            this._transitionDuration =
+                timeCoverter.toMS(this._originalTransitionDuration) ?? 0;
+        }
+
+        update() {
+            this._getListItem();
+            this._setupItem();
+        }
+
+        _startAutoplay() {
+            const repeat = (direction = null) => {
+                this._move().then(() => {
+                    repeat();
+                });
+            };
+            repeat();
+        }
+
+        _move(direction = null) {
+            const resetTime = 20;
+            setTimeout(() => {
+                this._container.style.transitionDuration = this._originalTransitionDuration;
+                if (this._config.reverse || direction === "prev") {
+                    this._container.style.transform = `translateX(calc(${this._sliderItems[0]?.offsetWidth}px + ${this._containerGap}))`;
+                } else {
+                    this._container.style.transform = `translateX(calc(-${this._sliderItems[0]?.offsetWidth}px - ${this._containerGap}))`;
+                }
+            }, resetTime);
+            return new Promise((resolve) => {
+                this._swap(direction);
+                setTimeout(() => {
+                    this._container.style.transitionDuration = "0s";
+                    this._container.style.transform = `translateX(0px)`;
+                    this._pause = false;
+                    resolve(true);
+                }, this._transitionDuration);
+            });
+        }
+
+        _swap(direction = null) {
+            if (this._config.reverse || direction === "prev") {
+                const firstChild = this._sliderItems[0];
+                const lastChild = this._sliderItems[this._totalItem - 1];
+                this._container.insertBefore(lastChild, firstChild);
+                this.update();
+            } else {
+                this.update();
+                const firstChild = this._sliderItems[0];
+                this._container.removeChild(firstChild);
+                this._container.appendChild(firstChild);
+            }
+        }
+    }
+
+    const slider13 = new Slider(".slider13",{
+        autoplay: true,
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!e.target.matches('[data-toggle="slider-action"]')) return;
+        if (!e.target.matches("[data-direction]")) return;
+        const direction = e.target.dataset.direction;
+        // if(direction === "next") slider.next()
+        // if(direction === "prev") slider.prev()
+    });
+
+</script>
+{% endblock %}

@@ -1,0 +1,528 @@
+{% extends 'adminpanel/base.html' %}
+{% load static %}
+{% block content %}
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+<script src="https://kit.fontawesome.com/e4f8bd703b.js" crossorigin="anonymous"></script>
+
+<style>
+  body {
+    background: #f7f7f7;
+  }
+
+  .table {
+    border-spacing: 0 0.85rem !important;
+  }
+
+  .table .dropdown {
+    display: inline-block;
+  }
+
+  .table td,
+  .table th {
+    vertical-align: middle;
+    margin-bottom: 10px;
+    border: none;
+  }
+
+  .table thead tr,
+  .table thead th {
+    border: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+  }
+
+  .table td {
+    background: #fff;
+  }
+
+  .table td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .table td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .avatar {
+    width: 2.75rem;
+    height: 2.75rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: transparent;
+    position: relative;
+    text-align: center;
+    color: #868e96;
+    font-weight: 700;
+    vertical-align: bottom;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .avatar-sm {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.83333rem;
+    line-height: 1.5;
+  }
+
+  .avatar-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .avatar-blue {
+    background-color: #c8d9f1;
+    color: #467fcf;
+  }
+
+  table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,
+  table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+    top: 28px;
+    left: 14px;
+    border: none;
+    box-shadow: none;
+  }
+
+  table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child,
+  table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child {
+    padding-left: 48px;
+  }
+
+  table.dataTable>tbody>tr.child ul.dtr-details {
+    width: 100%;
+  }
+
+  table.dataTable>tbody>tr.child span.dtr-title {
+    min-width: 50%;
+  }
+
+  table.dataTable.dtr-inline.collapsed>tbody>tr>td.child,
+  table.dataTable.dtr-inline.collapsed>tbody>tr>th.child,
+  table.dataTable.dtr-inline.collapsed>tbody>tr>td.dataTables_empty {
+    padding: 0.75rem 1rem 0.125rem;
+  }
+
+  div.dataTables_wrapper div.dataTables_length label,
+  div.dataTables_wrapper div.dataTables_filter label {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 767px) {
+    div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+      -ms-flex-pack: center !important;
+      justify-content: center !important;
+      margin-top: 1rem;
+    }
+  }
+
+  .btn-icon {
+    background: #fff;
+  }
+
+  .btn-icon .bx {
+    font-size: 20px;
+  }
+
+  .btn .bx {
+    vertical-align: middle;
+    font-size: 20px;
+  }
+
+  .dropdown-menu {
+    padding: 0.25rem 0;
+  }
+
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+  }
+
+  .badge {
+    padding: 0.5em 0.75em;
+  }
+
+  .badge-success-alt {
+    background-color: #d7f2c2;
+    color: #7bd235;
+  }
+
+  .table a {
+    color: #212529;
+  }
+
+  .table a:hover,
+  .table a:focus {
+    text-decoration: none;
+  }
+
+  table.dataTable {
+    margin-top: 12px !important;
+  }
+
+  .icon>.bx {
+    display: block;
+    min-width: 1.5em;
+    min-height: 1.5em;
+    text-align: center;
+    font-size: 1.0625rem;
+  }
+
+  .btn {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .avatar-blue {
+    background-color: #c8d9f1;
+    color: #467fcf;
+  }
+
+  .avatar-pink {
+    background-color: #fcd3e1;
+    color: #f66d9b;
+  }
+
+  /* Red border for invalid fields */
+  .invalid-border {
+    border-color: red !important;
+  }
+
+  /* Green border for valid fields */
+  .valid-border {
+    border-color: green !important;
+  }
+
+  .table {
+    --bs-table-hover-bg: transparent !important;
+  }
+</style>
+<div class="content-body">
+
+  <div class="container-fluid">
+    <div class="row py-5">
+      <h1 class="mb-3">Enquiries</h1>
+      <div class="col-12">
+        <div class="table-responsive">
+          <table id="example2" class="table table-hover responsive nowrap" style="width:100%">
+            <thead>
+  
+              <tr>
+                <th>Name</th>
+                <th>Mobile Number</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Status</th>
+                <th>Remark</th>
+                
+                <th>Lead In Date</th>
+                <th>Lead In Source <span style="visibility: hidden;"></span></th>
+                <th>Cell 1</th>
+                <th>Cell 2</th>
+                <th>Notes</th>
+                <th>Lead Assigned <span style="visibility: hidden;"></span></th>
+                <th>Lead Status <span style="visibility: hidden;"></span></th>
+                <th>Lead Close Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in enrolldata %}
+              <tr>
+                <td>{{ item.ename}}</td>
+                <td>{{ item.email}}</td>
+                <td>{{ item.ephone}}</td>
+                <td>{{ item.ecourse}}</td>
+                <td>{{ item.estatus}}</td>
+                <td>{{ item.eremark}}</td>
+                <td>{{item.created_at}}</td> <!-- Add this line -->
+                <td>{{item.lead_in_source}}</td>
+                <td>{{item.cell1}}</td>
+                <td>{{item.cell2}}</td>
+                <td>{{item.notes}}</td>
+                <td>{{item.lead_assigned}}</td>
+                <td>{{item.lead_status}}</td>
+                <td>{{ item.date }}</td> <!-- Add this line -->
+  
+                <td>
+                  <div class="dropdown">
+                    <!-- <button class="btn btn-primary update-status-btn" data-placement="top" style="background-color: goldenrod;" id="updatestatus" -->
+                    <!-- onclick="toggleUpdateStatusForm('{{ item.id }}')" data-contact-id="{{ item.id }}">Update Status</button> -->
+                    <button class="btn btn-primary update-status-btn" data-placement="top"
+                      style="background-color: goldenrod;" data-toggle="modal" data-target="#hidden-row1-{{ item.id }}"
+                      onclick="toggleUpdateStatusForm('{{ item.id }}')" data-contact-id="{{ item.id }}">Update
+                      Status</button>
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+              {% for item in enrolldata %}
+            <tbody>
+              <tr class="hidden-row modal fade" id="hidden-row1-{{ item.id }}" tabindex="-1" role="dialog"
+                aria-labelledby="hidden-row1-{{ item.id }}-label" aria-hidden="true">
+                <td class="modal-dialog  modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="hidden-row1-{{ item.id }}-label">Update Status</h5>
+                      <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                              </button> -->
+                      <button type="button" class="btn-close btn-sm" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+  
+                      <form method="post" name="myform"
+                        action="{% url 'eshikshaadminpanelapp:update_brouchers_status' %}"
+                        onsubmit="return validateForm(this);">
+                        {% csrf_token %}
+                        {% comment %} <input type="hidden" name="brouchers_id" value="{{ item.id }}">
+                        <label class="form-label" for="status">Status:</label>
+                        <select class="form-select mb-2" id="status-{{ item.id }}" name="status">
+                          <option value="" selected>-- selected --</option>
+                          {% for status in statuses %}
+                          <option value="{{ status.0 }}" class="{% if status.0 == item.estatus %} selected {% endif %}">{{ status.1 }}
+                          </option>
+                          {% endfor %}
+                        </select>
+                        <label class="form-label" for="remark">Remark:</label>
+                        <textarea class="form-control mb-2" id="remark-{{ item.id }}" name="remark">{{ item.eremark }}</textarea> {% endcomment %}
+                        <input type="hidden" name="brouchers_id" value="{{ item.id }}">
+                        <div class="row mb-3">
+                            <div class="col-lg-6">
+                              <label class="form-label" for="status">Status:</label>
+                              <select class="form-select mb-2" style="height:2.7rem;" id="status-{{ item.id }}" name="status">
+                                <option value="" selected>-- selected --</option>
+                                {% for status in statuses %}
+                                <option value="{{ status.0 }}" class="{% if status.0 == item.estatus %} selected {% endif %}">{{ status.1 }}
+                                </option>
+                                {% endfor %}
+                              </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="form-label" for="lead-source">Lead source</label>
+                                <select style="height: 2.7rem;" class="form-select lead-source-select" id="lead-source-{{ item.id }}" name="leadsrc">
+                                    <option value="" selected>-- Select Lead source --</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Youtube">Youtube</option>
+                                    <option value="Twitter">Twitter</option>
+                                    <option value="LinkIn">LinkIn</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                    
+                        <div class="row mb-3">
+                            <div class="col-lg-6">
+                                <label class="form-label" for="lead-assigned">Lead Assigned</label>
+                                <select style="height: 2.7rem;" class="form-select lead-assigned-select" id="lead-assigned-{{ item.id }}" name="lead_assigned">
+                                    <option value="" selected>-- Select Lead Assigned --</option>
+                                    <option value="Shraddha">Shraddha</option>
+                                    <option value="Shifa">Shifa</option>
+                                    <option value="Shyam">Shyam</option>
+                                    <option value="Brajesh">Brajesh</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <label class="form-label" for="lead-Status">Lead Status</label>
+                                <select style="height: 2.7rem;" class="form-select lead-Status-select" id="lead-Status-{{ item.id }}" name="leadstatus">
+                                    <option value="" selected>-- Select Lead source --</option>
+                                    <option value="Yet to connect">Yet to connect</option>
+                                    <option value="positive">positive</option>
+                                    <option value="Interested but problematic">Interested but problematic</option>
+                                    <option value="Not interested">Not interested</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-lg-6">
+                                <label class="form-label" for="notes">Notes</label>
+                                <textarea name="notes" id="notes" cols="10" class="form-control" height="2.7rem;" rows="2"></textarea>
+                            </div>
+                            <div class="col-lg-6">
+                              <label class="form-label" for="remark">Remark:</label>
+                              <textarea class="form-control mb-2" id="remark-{{ item.id }}" name="remark">{{ item.eremark }}</textarea>
+                            </div>
+
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-lg-6">
+                                <label class="form-label" for="cell2">Call1</label>
+                                <textarea name="cell1" id="cell1" cols="10" class="form-control" height="2.7rem;" rows="2"></textarea>
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="form-label" for="cell2">Call2</label>
+                                <textarea name="cell2" id="cell2" cols="10" class="form-control" height="2.7rem;" rows="2"></textarea>
+                            </div>
+                        </div>
+                        
+                        <input type="date" class="form-control" style="height: 2.7rem;" name="lead_close_date" id="lead-close-date-{{ item.id }}">
+                        
+                        <div class="modal-footer">
+                          <button type="submit" class="btn bt2 btn-primary" id="save-changes-btn">Save changes</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+<!-- <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script> -->
+
+<script>
+  $('.update-status-btn').on('click', function () {
+    var contactId = $(this).data('contact-id');
+    $('#hidden-row1-' + contactId).toggle();
+    $(this).toggleClass('class1');
+  });
+</script>
+
+<script>
+  function toggleUpdateStatusForm(contactId) {
+    var formDiv = document.getElementById('updatestatusdiv-' + contactId);
+    var hiddenRow = document.getElementById('hidden-row-' + contactId);
+    var hiddenContentPlaceholder = hiddenRow.querySelector('.hidden-content-placeholder');
+
+    if (hiddenRow.style.display === 'none') {
+      // Generate and display the form content
+      hiddenContentPlaceholder.innerHTML = formDiv.innerHTML;
+      hiddenRow.style.display = 'table-row';
+    } else {
+      // Hide the form content
+      hiddenRow.style.display = 'none';
+    }
+    if ($(hiddenRow).hasClass('show')) {
+      // Hide the modal if it's already visible
+      $(hiddenRow).modal('hide');
+    } else {
+      // Show the modal if it's hidden
+      $(hiddenRow).modal('show');
+    }
+  }
+
+  function displayUpdateStatusForm(contactId) {
+    var formDiv = document.getElementById('updatestatusdiv-' + contactId);
+    formDiv.style.display = 'block';
+
+    var statusSelect = document.getElementById('status-' + contactId);
+    var remarkTextarea = document.getElementById('remark-' + contactId);
+
+    // Reset previous border classes
+    statusSelect.classList.remove('invalid-border', 'valid-border');
+    remarkTextarea.classList.remove('invalid-border', 'valid-border');
+  }
+
+  // Validate form before submitting
+  function validateForm(form) {
+    var statusSelect = form.querySelector('.form-select');
+    var remarkTextarea = form.querySelector('.form-control');
+
+    var valid = true;
+
+    if (statusSelect.value === '') {
+      statusSelect.classList.add('invalid-border');
+      valid = false;
+    } else {
+      statusSelect.classList.remove('invalid-border');
+      statusSelect.classList.add('valid-border');
+    }
+
+    if (remarkTextarea.value.trim() === '') {
+      remarkTextarea.classList.add('invalid-border');
+      valid = false;
+    } else {
+      remarkTextarea.classList.remove('invalid-border');
+      remarkTextarea.classList.add('valid-border');
+    }
+
+    return valid;
+  }
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $("#example2").DataTable({
+      aaSorting: [],
+      responsive: true,
+
+      columnDefs: [
+        {
+          responsivePriority: 1,
+          targets: 0
+        },
+        {
+          responsivePriority: 2,
+          targets: -1
+        }
+      ],
+      order: [[0, 'desc']],
+      dom: 'Bfrtip',
+      buttons: [
+        {
+          extend: 'copyHtml5',
+          exportOptions: {
+            columns: [0, ':visible']
+          }
+        },
+        {
+          extend: 'excelHtml5',
+          exportOptions: {
+            columns: ':visible'
+          }
+        },
+        {
+          extend: 'pdfHtml5',
+          exportOptions: {
+            columns: [0, 1, 2, 5]
+          }
+        },
+        'colvis'
+      ]
+    });
+
+    $(".dataTables_filter input")
+      .attr("placeholder", "Search here...")
+      .css({
+        width: "200px",
+        display: "inline-block"
+      });
+
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+
+</script>
+
+
+
+
+
+{% endblock %}
